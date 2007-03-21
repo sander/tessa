@@ -5,11 +5,11 @@
 Tessa is a FOSS, cross-platform, modular Jabber client, employing C++ and Lua.
 == Philosophy ==
 
-Goals:<br>
-# Be flexible
-# Be small
-# Be easier
-# Be cross-platform
+Goals:
+ # Be flexible
+ # Be small
+ # Be easier
+ # Be cross-platform
 
 <font size=1>Yes, these may look familiar...</font><br>
 
@@ -27,10 +27,10 @@ Currently, after a lot of GUI comparisons, I have decided to start with [http://
 Practically all people who have used plugins in one application or another will agree they are excellent.
 
 However, there are more reasons that make using plugins in applications a good idea:
-* They attract a good developer community (which only means good for any OSS application)
-* They enforce structure within the application
-* Smaller parts are easy and quicker to develop, debug and maintain
-* Replaceable parts allow for great customisation of the application by end-users, who don't need technical knowledge to use them
+ * They attract a good developer community (which only means good for any OSS application)
+ * They enforce structure within the application
+ * Smaller parts are easy and quicker to develop, debug and maintain
+ * Replaceable parts allow for great customisation of the application by end-users, who don't need technical knowledge to use them
 
 *Technical*
 
