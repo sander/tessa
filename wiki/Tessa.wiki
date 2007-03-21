@@ -11,7 +11,7 @@ Goals:
  # Be easier
  # Be cross-platform
 
-<font size=1>Yes, these may look familiar...</font><br>
+,,Yes, these may look familiar...,,
 
 == Network ==
 Tessa will be able to support multiple network plugins. However the first, and main one will be a Jabber plugin, using gloox ( http://camaya.net/gloox/ ).
