@@ -37,5 +37,4 @@ However, there are more reasons that make using plugins in applications a good i
 Plugins may be either binary or Lua. Binary plugins must be valid Lua modules. _(currently)_
 == Feedback ==
 
-Discussion of this document can take place in TessaFeedback
-
+Discussion of this document can take place in [http://mattj.schtuff.com/tessafeedback Feedback on Tessa IM]
