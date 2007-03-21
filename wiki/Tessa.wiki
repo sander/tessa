@@ -1,0 +1,42 @@
+#labels Phase-Requirements
+*Warning:* *Work in progress!*
+
+= Tessa IM =
+Tessa is a FOSS, cross-platform, modular Jabber client, employing C++ and Lua.
+== Philosophy ==
+
+Goals:<br>
+# Be flexible
+# Be small
+# Be easier
+# Be cross-platform
+
+<font size=1>Yes, these may look familiar...</font><br>
+
+== Network ==
+Tessa will be able to support multiple network plugins. However the first, and main one will be a Jabber plugin, using gloox ( http://camaya.net/gloox/ ).
+== GUI ==
+The GUI is the hardest part of this application. It has the need to be both cross-platform and flexible. Building Tessa in a way that it relies on a specific GUI API would violate goal #1 of the project.
+
+Currently, after a lot of GUI comparisons, I have decided to start with [http://wxlua.sourceforge.net/|wxLua] (binding to [http://www.wxwidgets.org/|wxWidgets]).
+
+== Plugins ==
+
+*Why plugins?*
+
+Practically all people who have used plugins in one application or another will agree they are excellent.
+
+However, there are more reasons that make using plugins in applications a good idea:
+* They attract a good developer community (which only means good for any OSS application)
+* They enforce structure within the application
+* Smaller parts are easy and quicker to develop, debug and maintain
+* Replaceable parts allow for great customisation of the application by end-users, who don't need technical knowledge to use them
+
+*Technical*
+
+Plugins may be either binary or Lua. Binary plugins must be valid Lua modules. _(currently)_
+== Feedback ==
+
+Discussion of this document can take place in: [TessaFeedback|Feedback on Tessa IM].
+
+
