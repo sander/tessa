@@ -1,6 +1,4 @@
 #labels Phase-Design
-#Keep track of what plugins need
-
 = Plugins =
 
 Details relating to plugins. Things they need, how they work, etc. Actual Tessa API is elsewhere.
