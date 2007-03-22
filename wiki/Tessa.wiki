@@ -18,7 +18,7 @@ Tessa will be able to support multiple network plugins. However the first, and m
 == GUI ==
 The GUI is the hardest part of this application. It has the need to be both cross-platform and flexible. Building Tessa in a way that it relies on a specific GUI API would violate goal #1 of the project.
 
-Currently, after a lot of GUI comparisons, I have decided to start with [http://wxlua.sourceforge.net/|wxLua] (binding to [http://www.wxwidgets.org/|wxWidgets]).
+Currently, after a lot of GUI comparisons, I have decided to start with [http://wxlua.sourceforge.net/ wxLua] (binding to [http://www.wxwidgets.org/ wxWidgets]).
 
 == Plugins ==
 
