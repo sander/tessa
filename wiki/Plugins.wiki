@@ -1,3 +1,4 @@
+#summary Tessa's plugin architecture
 #labels Phase-Design
 = Plugins =
 
