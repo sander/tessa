@@ -17,7 +17,7 @@ function services:call(name, ...)
 end
 
 function services:pcall(name, ...)
-	if type(services[name]) ~= "function" then core:raiserror(string.format("Attempt to call non-existant service %s", name)); return nil; end
+	if type(services[name]) ~= "function" then core:error("NOSERVICE", string.format("Attempt to call non-existant service %s", name)); return nil; end
 	local res = { pcall(services[name], ...) };
 	if not res[1] then
 		--Error
