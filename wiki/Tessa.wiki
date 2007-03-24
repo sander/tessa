@@ -13,6 +13,8 @@ Goals:
 
 ,,Yes, these may look familiar...,,
 
+Also, you can view a 'map' of the things we want Tessa to be, at TessaMap.
+
 == Network ==
 Tessa will be able to support multiple network plugins. However the first, and main one will be a Jabber plugin, using gloox ( http://camaya.net/gloox/ ).
 == GUI ==
@@ -40,4 +42,3 @@ For more info on how plugins will integrate with Tessa's core, see [Plugins].
 == Feedback ==
 
 Discussion of this document can take place in [http://mattj.schtuff.com/tessafeedback Feedback on Tessa IM]
-
