@@ -1,4 +1,5 @@
-#labels Phase-Requirements
+#summary Design goals of Tessa
+#labels Phase-Requirements,Featured
 *Warning:* *Work in progress!*
 
 = Tessa IM =
