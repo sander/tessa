@@ -1,0 +1,27 @@
+#summary Tessa roadmap of releases
+#labels Phase-Implementation
+= Development Milestones =
+
+== Hydrogen Release ==
+*The simplest element in the universe, yet potentially explosive.*
+ # Services manager
+ # Events manager
+ # Plugin loader
+ # Simple dummy test plugins
+== Helium Release ==
+*Up, up and away!*
+ # Network layer
+  # Plugin that uses gloox bindings, and maps to Tessa services/events
+ # Minimal (text?) interface for testing network support
+== Lithium Release ==
+*Lithium, the lightest solid element*
+ # Plugin that implements some GUI services, and uses wxLua
+ # Modify core as necessary, to use new GUI services
+== Beryllium Release ==
+*Strong and light-weight*
+ # Stabilize
+  # Bug fixing
+  # UI improvements
+
+*Public beta release*
+
