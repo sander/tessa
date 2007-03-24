@@ -7,6 +7,7 @@ function core:raiserror(msg)
 end
 
 dofile("services.lua");
+dofile("events.lua");
 
 dofile("plugins/testplugin.lua");
 dofile("plugins/otherplugin.lua");
