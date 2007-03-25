@@ -8,6 +8,7 @@ function events:create(name)
 end
 
 function events:subscribe(name, callback)
+	assert(events[name]);
 	return events[name]:insert(callback); -- Returns a handle, that may be passed to :unsubscribe()
 end
 
