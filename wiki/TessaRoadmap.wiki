@@ -7,6 +7,7 @@
  # Services manager
  # Events manager
  # Plugin loader
+ # Simple Configuration Manager
  # Simple dummy test plugins
 == Helium Release ==
 *Up, up and away!*
@@ -24,4 +25,3 @@
   # UI improvements
 
 *Public beta release*
-
