@@ -4,6 +4,7 @@ events = {};
 
 function events:create(name)
 	events[name] = hooks:new();
+	return events[name];
 end
 
 function events:subscribe(name, callback)
@@ -16,6 +17,10 @@ function events:unsubscribe(handle)
 	end
 end
 
-function events:fireevent(name, ...)
-	return events[name](...);
+function events:fire(name, ...)
+	if type(name) == "string" then
+		return events[name](...);
+	else
+		return name(...);
+	end
 end

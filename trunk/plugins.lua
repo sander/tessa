@@ -46,3 +46,12 @@ function plugins:initialise(env)
 
 	env["_G"] = env;
 end
+
+function plugins:loadall(folder)
+	events:create("Events/Plugins/AllLoaded");
+	
+	plugins:load("Test plugin", "plugins/testplugin.lua");
+	plugins:load("Another plugin", "plugins/otherplugin.lua");
+	
+	events:fire("Events/Plugins/AllLoaded");
+end
