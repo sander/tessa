@@ -8,20 +8,15 @@
  # Events manager
  # Plugin loader
  # Simple Configuration Manager
- # Simple dummy test plugins
+ # Simple GUI implementations, to test GUI<->Core interaction
+ # Network Layer
+  # Lua plugin that uses gloox bindings
+
+*Pre-Alpha Release*
+
 == Helium Release ==
 *Up, up and away!*
- # Network layer
-  # Plugin that uses gloox bindings, and maps to Tessa services/events
- # Minimal (text?) interface for testing network support
-== Lithium Release ==
-*Lithium, the lightest solid element*
- # Plugin that implements some GUI services, and uses wxLua
- # Modify core as necessary, to use new GUI services
-== Beryllium Release ==
-*Strong and light-weight*
- # Stabilize
-  # Bug fixing
-  # UI improvements
+ # Polish GUI
+ # Options dialog
 
-*Public beta release*
+*Alpha Release*
