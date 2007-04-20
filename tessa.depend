@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1177099511 source:/home/matthew/dev/tessa/tessaApp.cpp
+	"wx_pch.h"
+	"tessaApp.h"
+	"tessaMain.h"
+	<wx/image.h>
+
+1177031343 /home/matthew/dev/tessa/tessaApp.h
+	<wx/wxprec.h>
+	<wx/wx.h>
+	"TessaCore.h"
+
+1177097181 /home/matthew/dev/tessa/tessaMain.h
+	"tessaApp.h"
+	<wx/frame.h>
+	<wx/menu.h>
+	<wx/statusbr.h>
+	<wx/treectrl.h>
+
+1177108472 source:/home/matthew/dev/tessa/tessaMain.cpp
+	"wx_pch.h"
+	"tessaMain.h"
+	<wx/bitmap.h>
+	<wx/font.h>
+	<wx/fontenum.h>
+	<wx/fontmap.h>
+	<wx/image.h>
+	<wx/intl.h>
+	<wx/settings.h>
+	"TessaGUIServices.h"
+
+1177108816 source:/home/matthew/dev/tessa/TessaCore.cpp
+	<wx/wx.h>
+	"TessaCore.h"
+	"TessaGUIServices.h"
+
+1177109170 /home/matthew/dev/tessa/TessaCore.h
+	<wx/wx.h>
+
+1177097410 /home/matthew/dev/tessa/TessaGUIServices.h
+

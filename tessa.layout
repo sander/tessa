@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="TessaCore.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="277" topLine="0" />
+	</File>
+	<File name="TessaCore.h" open="1" top="1" tabpos="5">
+		<Cursor position="452" topLine="0" />
+	</File>
+	<File name="TessaGUIServices.h" open="1" top="0" tabpos="7">
+		<Cursor position="146" topLine="0" />
+	</File>
+	<File name="tessaApp.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="901" topLine="0" />
+	</File>
+	<File name="tessaApp.h" open="1" top="0" tabpos="1">
+		<Cursor position="627" topLine="0" />
+	</File>
+	<File name="tessaMain.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="1892" topLine="50" />
+	</File>
+	<File name="tessaMain.h" open="1" top="0" tabpos="2">
+		<Cursor position="841" topLine="9" />
+	</File>
+</CodeBlocks_layout_file>
