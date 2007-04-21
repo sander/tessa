@@ -55,3 +55,13 @@ On the 'Build' menu select 'Build and Run'. Enjoy!
 = All other systems =
 
 Install Ubuntu, and carry out previous steps :P
+
+= Troubleshooting =
+
+===liblua5.1.a not found===
+On some systems (*gentoo*, at least) the liblua binary is named differently. Assuming your libraries are in /usr/lib/, type the following:
+
+`ln -s /usr/lib/liblua.a /usr/lib/liblua5.1.a`
+
+===Problems building in Terminal/command line===
+If you have problems, make sure that you typed every command as it is here, copy/paste if you can.
