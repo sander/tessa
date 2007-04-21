@@ -43,13 +43,13 @@
 			<Add option="`wx-config --libs`" />
 			<Add directory="/usr/lib/" />
 		</Linker>
-		<Unit filename="TessaCore.cpp" />
-		<Unit filename="TessaCore.h" />
-		<Unit filename="TessaGUIServices.h" />
-		<Unit filename="tessaApp.cpp" />
-		<Unit filename="tessaApp.h" />
-		<Unit filename="tessaMain.cpp" />
-		<Unit filename="tessaMain.h" />
+		<Unit filename="src/TessaCore.cpp" />
+		<Unit filename="src/TessaCore.h" />
+		<Unit filename="src/TessaGUIServices.h" />
+		<Unit filename="src/tessaApp.cpp" />
+		<Unit filename="src/tessaApp.h" />
+		<Unit filename="src/tessaMain.cpp" />
+		<Unit filename="src/tessaMain.h" />
 		<Unit filename="wxsmith/tessaframe.wxs" />
 		<Extensions>
 			<code_completion />
