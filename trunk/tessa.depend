@@ -39,3 +39,43 @@
 
 1177097410 /home/matthew/dev/tessa/TessaGUIServices.h
 
+1177158800 source:/home/matthew/dev/tessa/src/TessaCore.cpp
+	<wx/wx.h>
+	"TessaCore.h"
+	"TessaGUIServices.h"
+
+1177162081 /home/matthew/dev/tessa/src/TessaCore.h
+	<wx/wx.h>
+
+1177111558 /home/matthew/dev/tessa/src/TessaGUIServices.h
+
+1177111558 source:/home/matthew/dev/tessa/src/tessaApp.cpp
+	"wx_pch.h"
+	"tessaApp.h"
+	"tessaMain.h"
+	<wx/image.h>
+
+1177111558 /home/matthew/dev/tessa/src/tessaApp.h
+	<wx/wxprec.h>
+	<wx/wx.h>
+	"TessaCore.h"
+
+1177111558 /home/matthew/dev/tessa/src/tessaMain.h
+	"tessaApp.h"
+	<wx/frame.h>
+	<wx/menu.h>
+	<wx/statusbr.h>
+	<wx/treectrl.h>
+
+1177161855 source:/home/matthew/dev/tessa/src/tessaMain.cpp
+	"wx_pch.h"
+	"tessaMain.h"
+	<wx/bitmap.h>
+	<wx/font.h>
+	<wx/fontenum.h>
+	<wx/fontmap.h>
+	<wx/image.h>
+	<wx/intl.h>
+	<wx/settings.h>
+	"TessaGUIServices.h"
+
