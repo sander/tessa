@@ -2,8 +2,9 @@
 #define TESSACORE_H_INCLUDED
 
 #include <wx/wx.h>
+#include "LuaInterface.h"
 
-class TessaCoreThread : wxThread
+class TessaCoreThread : wxThread, LuaInterface
 {
     public:
         TessaCoreThread(wxEvtHandler* EventDestination, int id)
@@ -19,6 +20,8 @@ class TessaCoreThread : wxThread
         wxEvtHandler* GUIThread;
         int OurID;
         virtual ExitCode Entry();
+    public:
+        void PostEvent(int EventID, CoreEventData* Data);
 };
 
 #define wxID_CORETHREAD (wxID_HIGHEST + 1)
