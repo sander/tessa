@@ -111,7 +111,6 @@ tessaRoster::tessaRoster(wxWindow* parent,wxWindowID id)
     RosterList->AppendItem(RosterRootNode, _T("waqas"));
     RosterList->AppendItem(RosterRootNode, _T("Paul"));
     RosterList->AppendItem(RosterRootNode, _T("niekie"));
-    printf("Ta\n");
 }
 
 tessaRoster::~tessaRoster()
@@ -135,6 +134,5 @@ void tessaRoster::OnAbout(wxCommandEvent& event)
 
 void tessaRoster::SvcContactStatusChanged(wxCommandEvent& event)
 {
-    printf("T %d\n", event.GetId());
     RosterList->AppendItem(RosterRootNode, event.GetString());
 }

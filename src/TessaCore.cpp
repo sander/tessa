@@ -10,5 +10,8 @@ wxThread::ExitCode TessaCoreThread::Entry()
     wxCommandEvent evt(TessaGUIServices::ContactStatusChanged, OurID);
     evt.SetString(_T("TobiasFar!"));
     wxPostEvent(GUIThread, evt);
+    evt.SetString(_T("niekie2!"));
+    wxPostEvent(GUIThread, evt);
+
     while(1) {};
 }

@@ -10,7 +10,6 @@ class TessaCoreThread : wxThread
         {
             GUIThread = EventDestination;
             OurID = id;
-            printf("t %d\n", OurID);
            Create();
            Run();
         };
