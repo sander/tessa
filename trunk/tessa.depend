@@ -39,15 +39,16 @@
 
 1177097410 /home/matthew/dev/tessa/TessaGUIServices.h
 
-1177158800 source:/home/matthew/dev/tessa/src/TessaCore.cpp
+1177273625 source:/home/matthew/dev/tessa/src/TessaCore.cpp
 	<wx/wx.h>
 	"TessaCore.h"
 	"TessaGUIServices.h"
 
-1177162081 /home/matthew/dev/tessa/src/TessaCore.h
+1177257619 /home/matthew/dev/tessa/src/TessaCore.h
 	<wx/wx.h>
+	"LuaInterface.h"
 
-1177111558 /home/matthew/dev/tessa/src/TessaGUIServices.h
+1177257256 /home/matthew/dev/tessa/src/TessaGUIServices.h
 
 1177111558 source:/home/matthew/dev/tessa/src/tessaApp.cpp
 	"wx_pch.h"
@@ -78,4 +79,432 @@
 	<wx/intl.h>
 	<wx/settings.h>
 	"TessaGUIServices.h"
+
+1177262290 /home/matthew/dev/tessa/src/LuaInterface.h
+	<lua5.1/lua.h>
+	<lua5.1/lauxlib.h>
+	<lua5.1/lualib.h>
+	"TessaGUIServices.h"
+
+1162578714 /usr/include//lua5.1/lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1162578714 /usr/include//lua5.1/luaconf.h
+	<limits.h>
+	<stddef.h>
+	<unistd.h>
+	<io.h>
+	<stdio.h>
+	<stdio.h>
+	<readline/readline.h>
+	<readline/history.h>
+	<assert.h>
+	<math.h>
+	<unistd.h>
+
+1175682660 /usr/include//limits.h
+	<features.h>
+	<bits/wordsize.h>
+	<bits/posix1_lim.h>
+	<bits/posix2_lim.h>
+	<bits/xopen_lim.h>
+
+1175682660 /usr/include//features.h
+	<sys/cdefs.h>
+	<gnu/stubs.h>
+
+1175682707 /usr/include//sys/cdefs.h
+	<features.h>
+	<bits/wordsize.h>
+
+1175682688 /usr/include//bits/wordsize.h
+
+1175682660 /usr/include//gnu/stubs.h
+	<bits/wordsize.h>
+	<gnu/stubs-32.h>
+	<gnu/stubs-64.h>
+
+1175682755 /usr/include//gnu/stubs-32.h
+
+1175682703 /usr/include//bits/posix1_lim.h
+	<bits/local_lim.h>
+
+1175682703 /usr/include//bits/local_lim.h
+	<linux/limits.h>
+
+1176625636 /usr/include//linux/limits.h
+
+1175682703 /usr/include//bits/posix2_lim.h
+
+1175682660 /usr/include//bits/xopen_lim.h
+	<bits/stdio_lim.h>
+	<bits/wordsize.h>
+
+1175682690 /usr/include//bits/stdio_lim.h
+
+1175682703 /usr/include//unistd.h
+	<features.h>
+	<bits/posix_opt.h>
+	<bits/environments.h>
+	<bits/types.h>
+	<stddef.h>
+	<bits/confname.h>
+	<getopt.h>
+	<bits/unistd.h>
+
+1175682703 /usr/include//bits/posix_opt.h
+
+1175682703 /usr/include//bits/environments.h
+
+1175682703 /usr/include//bits/types.h
+	<features.h>
+	<bits/wordsize.h>
+	<stddef.h>
+	<bits/typesizes.h>
+
+1175682703 /usr/include//bits/typesizes.h
+
+1175682703 /usr/include//bits/confname.h
+
+1175682703 /usr/include//getopt.h
+	<ctype.h>
+
+1175682680 /usr/include//ctype.h
+	<features.h>
+	<bits/types.h>
+	<endian.h>
+	<xlocale.h>
+
+1175682695 /usr/include//endian.h
+	<features.h>
+	<bits/endian.h>
+
+1175682695 /usr/include//bits/endian.h
+
+1175682666 /usr/include//xlocale.h
+
+1175682703 /usr/include//bits/unistd.h
+
+1175682692 /usr/include//stdio.h
+	<features.h>
+	<stddef.h>
+	<bits/types.h>
+	<libio.h>
+	<stdarg.h>
+	<bits/stdio_lim.h>
+	<bits/sys_errlist.h>
+	<getopt.h>
+	<bits/stdio.h>
+	<bits/stdio2.h>
+	<bits/stdio-ldbl.h>
+
+1175682692 /usr/include//libio.h
+	<_G_config.h>
+	<stdarg.h>
+	<sys/cdefs.h>
+	<bits/stdio-lock.h>
+	<shlib-compat.h>
+	<bits/libio-ldbl.h>
+
+1175682692 /usr/include//_G_config.h
+	<bits/types.h>
+	<stddef.h>
+	<wchar.h>
+	<gconv.h>
+
+1175682697 /usr/include//wchar.h
+	<features.h>
+	<stdio.h>
+	<stdarg.h>
+	<stddef.h>
+	<bits/wchar.h>
+	<wctype.h>
+	<xlocale.h>
+	<xlocale.h>
+	<xlocale.h>
+	<wctype.h>
+	<bits/wchar2.h>
+	<bits/wchar-ldbl.h>
+
+1175682697 /usr/include//bits/wchar.h
+
+1175682711 /usr/include//wctype.h
+	<features.h>
+	<bits/types.h>
+	<stddef.h>
+	<endian.h>
+	<xlocale.h>
+
+1175682697 /usr/include//bits/wchar2.h
+
+1175682697 /usr/include//bits/wchar-ldbl.h
+
+1175682661 /usr/include//gconv.h
+	<features.h>
+	<wchar.h>
+	<stddef.h>
+
+1175682692 /usr/include//bits/stdio-lock.h
+	<bits/libc-lock.h>
+	<lowlevellock.h>
+
+1175682660 /usr/include//bits/libc-lock.h
+	<pthread.h>
+	<stddef.h>
+	<lowlevellock.h>
+	<tls.h>
+	<pthread-functions.h>
+	<bp-sym.h>
+
+1175682722 /usr/include//pthread.h
+	<features.h>
+	<sched.h>
+	<time.h>
+	<signal.h>
+	<bits/pthreadtypes.h>
+	<bits/setjmp.h>
+	<bits/wordsize.h>
+
+1175682703 /usr/include//sched.h
+	<features.h>
+	<bits/types.h>
+	<time.h>
+	<bits/sched.h>
+
+1175682700 /usr/include//time.h
+	<features.h>
+	<stddef.h>
+	<bits/time.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<bits/types.h>
+	<xlocale.h>
+
+1175682700 /usr/include//bits/time.h
+	<bits/types.h>
+	<bits/types.h>
+
+1175682703 /usr/include//bits/sched.h
+
+1175682687 /usr/include//signal.h
+	<features.h>
+	<bits/sigset.h>
+	<bits/types.h>
+	<bits/signum.h>
+	<time.h>
+	<bits/siginfo.h>
+	<bits/sigaction.h>
+	<bits/sigcontext.h>
+	<bits/sigstack.h>
+	<sys/ucontext.h>
+	<bits/pthreadtypes.h>
+	<bits/sigthread.h>
+
+1175682687 /usr/include//bits/sigset.h
+
+1175682687 /usr/include//bits/signum.h
+
+1175682687 /usr/include//bits/siginfo.h
+	<bits/wordsize.h>
+
+1175682687 /usr/include//bits/sigaction.h
+
+1175682687 /usr/include//bits/sigcontext.h
+	<asm/sigcontext.h>
+
+1176625633 /usr/include//asm/sigcontext.h
+	<asm-x86_64/sigcontext.h>
+	<asm-i386/sigcontext.h>
+
+1176625633 /usr/include//asm-x86_64/sigcontext.h
+	<asm/types.h>
+
+1176625634 /usr/include//asm/types.h
+	<asm-x86_64/types.h>
+	<asm-i386/types.h>
+
+1176625633 /usr/include//asm-x86_64/types.h
+
+1176625633 /usr/include//asm-i386/types.h
+
+1176625633 /usr/include//asm-i386/sigcontext.h
+
+1175682687 /usr/include//bits/sigstack.h
+
+1175682688 /usr/include//sys/ucontext.h
+	<features.h>
+	<signal.h>
+	<bits/sigcontext.h>
+
+1175682703 /usr/include//bits/pthreadtypes.h
+
+1175682687 /usr/include//bits/sigthread.h
+
+1175682686 /usr/include//bits/setjmp.h
+
+1163148633 /usr/include//tls.h
+	<tcl.h>
+
+1175682692 /usr/include//bits/libio-ldbl.h
+
+1175682692 /usr/include//bits/sys_errlist.h
+
+1175682692 /usr/include//bits/stdio.h
+
+1175682692 /usr/include//bits/stdio2.h
+
+1175682692 /usr/include//bits/stdio-ldbl.h
+
+1176241596 /usr/include//readline/readline.h
+	"rlstdc.h"
+	"rltypedefs.h"
+	"keymaps.h"
+	"tilde.h"
+	<stdio.h>
+	<readline/rlstdc.h>
+	<readline/rltypedefs.h>
+	<readline/keymaps.h>
+	<readline/tilde.h>
+
+1176241596 /usr/include//readline/rlstdc.h
+
+1176241596 /usr/include//readline/rltypedefs.h
+
+1176241596 /usr/include//readline/keymaps.h
+	"rlstdc.h"
+	"chardefs.h"
+	"rltypedefs.h"
+	<readline/rlstdc.h>
+	<readline/chardefs.h>
+	<readline/rltypedefs.h>
+
+1176241596 /usr/include//readline/chardefs.h
+	<ctype.h>
+	<string.h>
+
+1175682695 /usr/include//string.h
+	<features.h>
+	<stddef.h>
+	<xlocale.h>
+	<bits/string.h>
+	<bits/string2.h>
+	<bits/string3.h>
+
+1175682695 /usr/include//bits/string.h
+
+1175682695 /usr/include//bits/string2.h
+	<endian.h>
+	<bits/types.h>
+	<stdlib.h>
+
+1175682688 /usr/include//stdlib.h
+	<features.h>
+	<stddef.h>
+	<bits/waitflags.h>
+	<bits/waitstatus.h>
+	<xlocale.h>
+	<sys/types.h>
+	<alloca.h>
+	<bits/stdlib.h>
+	<bits/stdlib-ldbl.h>
+
+1175682703 /usr/include//bits/waitflags.h
+
+1175682703 /usr/include//bits/waitstatus.h
+	<endian.h>
+
+1175682703 /usr/include//sys/types.h
+	<features.h>
+	<bits/types.h>
+	<time.h>
+	<stddef.h>
+	<endian.h>
+	<sys/select.h>
+	<sys/sysmacros.h>
+	<bits/pthreadtypes.h>
+
+1175682707 /usr/include//sys/select.h
+	<features.h>
+	<bits/types.h>
+	<bits/select.h>
+	<bits/sigset.h>
+	<time.h>
+	<bits/time.h>
+
+1175682707 /usr/include//bits/select.h
+
+1175682703 /usr/include//sys/sysmacros.h
+	<features.h>
+
+1175682688 /usr/include//alloca.h
+	<features.h>
+	<stddef.h>
+
+1175682688 /usr/include//bits/stdlib.h
+
+1175682688 /usr/include//bits/stdlib-ldbl.h
+
+1175682695 /usr/include//bits/string3.h
+
+1176241596 /usr/include//readline/tilde.h
+
+1176241596 /usr/include//readline/history.h
+	<time.h>
+	"rlstdc.h"
+	"rltypedefs.h"
+	<stdio.h>
+	<readline/rlstdc.h>
+	<readline/rltypedefs.h>
+
+1175682679 /usr/include//assert.h
+	<features.h>
+
+1175682684 /usr/include//math.h
+	<features.h>
+	<bits/huge_val.h>
+	<bits/huge_valf.h>
+	<bits/huge_vall.h>
+	<bits/inf.h>
+	<bits/nan.h>
+	<bits/mathdef.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathinline.h>
+
+1175682684 /usr/include//bits/huge_val.h
+	<endian.h>
+
+1175682684 /usr/include//bits/huge_valf.h
+
+1175682684 /usr/include//bits/huge_vall.h
+
+1175682684 /usr/include//bits/inf.h
+
+1175682684 /usr/include//bits/nan.h
+	<endian.h>
+
+1175682684 /usr/include//bits/mathdef.h
+
+1175682684 /usr/include//bits/mathcalls.h
+
+1175682684 /usr/include//bits/mathinline.h
+
+1162578714 /usr/include//lua5.1/lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1162578714 /usr/include//lua5.1/lualib.h
+	"lua.h"
+
+1177262438 source:/home/matthew/dev/tessa/src/LuaInterface.cpp
+	"LuaInterface.h"
+	<lua5.1/lua.h>
+	<lua5.1/lualib.h>
+	<lua5.1/lauxlib.h>
 

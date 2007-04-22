@@ -11,7 +11,6 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
-				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -41,8 +40,13 @@
 		</Compiler>
 		<Linker>
 			<Add option="`wx-config --libs`" />
+			<Add library="/usr/lib/liblua5.1.a" />
 			<Add directory="/usr/lib/" />
 		</Linker>
+		<Unit filename="src/LuaInterface.cpp">
+			<Option weight="76" />
+		</Unit>
+		<Unit filename="src/LuaInterface.h" />
 		<Unit filename="src/TessaCore.cpp" />
 		<Unit filename="src/TessaCore.h" />
 		<Unit filename="src/TessaGUIServices.h" />
