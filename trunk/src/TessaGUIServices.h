@@ -3,6 +3,7 @@
 
 namespace TessaGUIServices
 {
+    const int CoreError = 0;
     const int ContactStatusChanged = 1;
 }
 
