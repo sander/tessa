@@ -104,47 +104,47 @@
 	<math.h>
 	<unistd.h>
 
-1175682660 /usr/include//limits.h
+1161543295 /usr/include//limits.h
 	<features.h>
 	<bits/wordsize.h>
 	<bits/posix1_lim.h>
 	<bits/posix2_lim.h>
 	<bits/xopen_lim.h>
 
-1175682660 /usr/include//features.h
+1161543295 /usr/include//features.h
 	<sys/cdefs.h>
 	<gnu/stubs.h>
 
-1175682707 /usr/include//sys/cdefs.h
+1161543525 /usr/include//sys/cdefs.h
 	<features.h>
 	<bits/wordsize.h>
 
-1175682688 /usr/include//bits/wordsize.h
+1161543427 /usr/include//bits/wordsize.h
 
-1175682660 /usr/include//gnu/stubs.h
+1161543296 /usr/include//gnu/stubs.h
 	<bits/wordsize.h>
 	<gnu/stubs-32.h>
 	<gnu/stubs-64.h>
 
-1175682755 /usr/include//gnu/stubs-32.h
+1161543759 /usr/include//gnu/stubs-32.h
 
-1175682703 /usr/include//bits/posix1_lim.h
+1161543501 /usr/include//bits/posix1_lim.h
 	<bits/local_lim.h>
 
-1175682703 /usr/include//bits/local_lim.h
+1161543501 /usr/include//bits/local_lim.h
 	<linux/limits.h>
 
-1176625636 /usr/include//linux/limits.h
+1170693119 /usr/include//linux/limits.h
 
-1175682703 /usr/include//bits/posix2_lim.h
+1161543501 /usr/include//bits/posix2_lim.h
 
-1175682660 /usr/include//bits/xopen_lim.h
+1161543295 /usr/include//bits/xopen_lim.h
 	<bits/stdio_lim.h>
 	<bits/wordsize.h>
 
-1175682690 /usr/include//bits/stdio_lim.h
+1161543435 /usr/include//bits/stdio_lim.h
 
-1175682703 /usr/include//unistd.h
+1161543501 /usr/include//unistd.h
 	<features.h>
 	<bits/posix_opt.h>
 	<bits/environments.h>
@@ -154,40 +154,40 @@
 	<getopt.h>
 	<bits/unistd.h>
 
-1175682703 /usr/include//bits/posix_opt.h
+1161543501 /usr/include//bits/posix_opt.h
 
-1175682703 /usr/include//bits/environments.h
+1161543501 /usr/include//bits/environments.h
 
-1175682703 /usr/include//bits/types.h
+1161543501 /usr/include//bits/types.h
 	<features.h>
 	<bits/wordsize.h>
 	<stddef.h>
 	<bits/typesizes.h>
 
-1175682703 /usr/include//bits/typesizes.h
+1161543501 /usr/include//bits/typesizes.h
 
-1175682703 /usr/include//bits/confname.h
+1161543501 /usr/include//bits/confname.h
 
-1175682703 /usr/include//getopt.h
+1161543501 /usr/include//getopt.h
 	<ctype.h>
 
-1175682680 /usr/include//ctype.h
+1161543377 /usr/include//ctype.h
 	<features.h>
 	<bits/types.h>
 	<endian.h>
 	<xlocale.h>
 
-1175682695 /usr/include//endian.h
+1161543461 /usr/include//endian.h
 	<features.h>
 	<bits/endian.h>
 
-1175682695 /usr/include//bits/endian.h
+1161543461 /usr/include//bits/endian.h
 
-1175682666 /usr/include//xlocale.h
+1161543335 /usr/include//xlocale.h
 
-1175682703 /usr/include//bits/unistd.h
+1161543501 /usr/include//bits/unistd.h
 
-1175682692 /usr/include//stdio.h
+1161543446 /usr/include//stdio.h
 	<features.h>
 	<stddef.h>
 	<bits/types.h>
@@ -200,7 +200,7 @@
 	<bits/stdio2.h>
 	<bits/stdio-ldbl.h>
 
-1175682692 /usr/include//libio.h
+1161543446 /usr/include//libio.h
 	<_G_config.h>
 	<stdarg.h>
 	<sys/cdefs.h>
@@ -208,13 +208,13 @@
 	<shlib-compat.h>
 	<bits/libio-ldbl.h>
 
-1175682692 /usr/include//_G_config.h
+1161543446 /usr/include//_G_config.h
 	<bits/types.h>
 	<stddef.h>
 	<wchar.h>
 	<gconv.h>
 
-1175682697 /usr/include//wchar.h
+1161543474 /usr/include//wchar.h
 	<features.h>
 	<stdio.h>
 	<stdarg.h>
@@ -228,29 +228,29 @@
 	<bits/wchar2.h>
 	<bits/wchar-ldbl.h>
 
-1175682697 /usr/include//bits/wchar.h
+1161543474 /usr/include//bits/wchar.h
 
-1175682711 /usr/include//wctype.h
+1161543548 /usr/include//wctype.h
 	<features.h>
 	<bits/types.h>
 	<stddef.h>
 	<endian.h>
 	<xlocale.h>
 
-1175682697 /usr/include//bits/wchar2.h
+1161543474 /usr/include//bits/wchar2.h
 
-1175682697 /usr/include//bits/wchar-ldbl.h
+1161543474 /usr/include//bits/wchar-ldbl.h
 
-1175682661 /usr/include//gconv.h
+1161543302 /usr/include//gconv.h
 	<features.h>
 	<wchar.h>
 	<stddef.h>
 
-1175682692 /usr/include//bits/stdio-lock.h
+1161543446 /usr/include//bits/stdio-lock.h
 	<bits/libc-lock.h>
 	<lowlevellock.h>
 
-1175682660 /usr/include//bits/libc-lock.h
+1161543295 /usr/include//bits/libc-lock.h
 	<pthread.h>
 	<stddef.h>
 	<lowlevellock.h>
@@ -258,7 +258,7 @@
 	<pthread-functions.h>
 	<bp-sym.h>
 
-1175682722 /usr/include//pthread.h
+1161543601 /usr/include//pthread.h
 	<features.h>
 	<sched.h>
 	<time.h>
@@ -267,13 +267,13 @@
 	<bits/setjmp.h>
 	<bits/wordsize.h>
 
-1175682703 /usr/include//sched.h
+1161543501 /usr/include//sched.h
 	<features.h>
 	<bits/types.h>
 	<time.h>
 	<bits/sched.h>
 
-1175682700 /usr/include//time.h
+1161543487 /usr/include//time.h
 	<features.h>
 	<stddef.h>
 	<bits/time.h>
@@ -284,13 +284,13 @@
 	<bits/types.h>
 	<xlocale.h>
 
-1175682700 /usr/include//bits/time.h
+1161543487 /usr/include//bits/time.h
 	<bits/types.h>
 	<bits/types.h>
 
-1175682703 /usr/include//bits/sched.h
+1161543501 /usr/include//bits/sched.h
 
-1175682687 /usr/include//signal.h
+1161543420 /usr/include//signal.h
 	<features.h>
 	<bits/sigset.h>
 	<bits/types.h>
@@ -304,21 +304,20 @@
 	<bits/pthreadtypes.h>
 	<bits/sigthread.h>
 
-1175682687 /usr/include//bits/sigset.h
+1161543420 /usr/include//bits/sigset.h
 
-1175682687 /usr/include//bits/signum.h
+1161543420 /usr/include//bits/signum.h
 
-1175682687 /usr/include//bits/siginfo.h
+1161543420 /usr/include//bits/siginfo.h
 	<bits/wordsize.h>
 
-1175682687 /usr/include//bits/sigaction.h
+1161543420 /usr/include//bits/sigaction.h
 
-1175682687 /usr/include//bits/sigcontext.h
+1161543420 /usr/include//bits/sigcontext.h
 	<asm/sigcontext.h>
 
-1176625633 /usr/include//asm/sigcontext.h
-	<asm-x86_64/sigcontext.h>
-	<asm-i386/sigcontext.h>
+1170693119 /usr/include//asm/sigcontext.h
+	<linux/compiler.h>
 
 1176625633 /usr/include//asm-x86_64/sigcontext.h
 	<asm/types.h>
@@ -333,48 +332,47 @@
 
 1176625633 /usr/include//asm-i386/sigcontext.h
 
-1175682687 /usr/include//bits/sigstack.h
+1161543420 /usr/include//bits/sigstack.h
 
-1175682688 /usr/include//sys/ucontext.h
+1161543427 /usr/include//sys/ucontext.h
 	<features.h>
 	<signal.h>
 	<bits/sigcontext.h>
 
-1175682703 /usr/include//bits/pthreadtypes.h
+1161543501 /usr/include//bits/pthreadtypes.h
 
-1175682687 /usr/include//bits/sigthread.h
+1161543420 /usr/include//bits/sigthread.h
 
-1175682686 /usr/include//bits/setjmp.h
+1161543417 /usr/include//bits/setjmp.h
 
 1163148633 /usr/include//tls.h
 	<tcl.h>
 
-1175682692 /usr/include//bits/libio-ldbl.h
+1161543446 /usr/include//bits/libio-ldbl.h
 
-1175682692 /usr/include//bits/sys_errlist.h
+1161543446 /usr/include//bits/sys_errlist.h
 
-1175682692 /usr/include//bits/stdio.h
+1161543446 /usr/include//bits/stdio.h
 
-1175682692 /usr/include//bits/stdio2.h
+1161543446 /usr/include//bits/stdio2.h
 
-1175682692 /usr/include//bits/stdio-ldbl.h
+1161543446 /usr/include//bits/stdio-ldbl.h
 
-1176241596 /usr/include//readline/readline.h
+1138970988 /usr/include//readline/readline.h
 	"rlstdc.h"
 	"rltypedefs.h"
 	"keymaps.h"
 	"tilde.h"
-	<stdio.h>
 	<readline/rlstdc.h>
 	<readline/rltypedefs.h>
 	<readline/keymaps.h>
 	<readline/tilde.h>
 
-1176241596 /usr/include//readline/rlstdc.h
+1138970988 /usr/include//readline/rlstdc.h
 
-1176241596 /usr/include//readline/rltypedefs.h
+1138970988 /usr/include//readline/rltypedefs.h
 
-1176241596 /usr/include//readline/keymaps.h
+1138970988 /usr/include//readline/keymaps.h
 	"rlstdc.h"
 	"chardefs.h"
 	"rltypedefs.h"
@@ -382,11 +380,14 @@
 	<readline/chardefs.h>
 	<readline/rltypedefs.h>
 
-1176241596 /usr/include//readline/chardefs.h
+1138970988 /usr/include//readline/chardefs.h
 	<ctype.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
 	<string.h>
 
-1175682695 /usr/include//string.h
+1161543461 /usr/include//string.h
 	<features.h>
 	<stddef.h>
 	<xlocale.h>
@@ -394,14 +395,14 @@
 	<bits/string2.h>
 	<bits/string3.h>
 
-1175682695 /usr/include//bits/string.h
+1161543461 /usr/include//bits/string.h
 
-1175682695 /usr/include//bits/string2.h
+1161543461 /usr/include//bits/string2.h
 	<endian.h>
 	<bits/types.h>
 	<stdlib.h>
 
-1175682688 /usr/include//stdlib.h
+1161543427 /usr/include//stdlib.h
 	<features.h>
 	<stddef.h>
 	<bits/waitflags.h>
@@ -412,12 +413,12 @@
 	<bits/stdlib.h>
 	<bits/stdlib-ldbl.h>
 
-1175682703 /usr/include//bits/waitflags.h
+1161543501 /usr/include//bits/waitflags.h
 
-1175682703 /usr/include//bits/waitstatus.h
+1161543501 /usr/include//bits/waitstatus.h
 	<endian.h>
 
-1175682703 /usr/include//sys/types.h
+1161543501 /usr/include//sys/types.h
 	<features.h>
 	<bits/types.h>
 	<time.h>
@@ -427,7 +428,7 @@
 	<sys/sysmacros.h>
 	<bits/pthreadtypes.h>
 
-1175682707 /usr/include//sys/select.h
+1161543525 /usr/include//sys/select.h
 	<features.h>
 	<bits/types.h>
 	<bits/select.h>
@@ -435,35 +436,34 @@
 	<time.h>
 	<bits/time.h>
 
-1175682707 /usr/include//bits/select.h
+1161543525 /usr/include//bits/select.h
 
-1175682703 /usr/include//sys/sysmacros.h
+1161543501 /usr/include//sys/sysmacros.h
 	<features.h>
 
-1175682688 /usr/include//alloca.h
+1161543427 /usr/include//alloca.h
 	<features.h>
 	<stddef.h>
 
-1175682688 /usr/include//bits/stdlib.h
+1161543427 /usr/include//bits/stdlib.h
 
-1175682688 /usr/include//bits/stdlib-ldbl.h
+1161543427 /usr/include//bits/stdlib-ldbl.h
 
-1175682695 /usr/include//bits/string3.h
+1161543461 /usr/include//bits/string3.h
 
-1176241596 /usr/include//readline/tilde.h
+1138970988 /usr/include//readline/tilde.h
 
-1176241596 /usr/include//readline/history.h
+1138970988 /usr/include//readline/history.h
 	<time.h>
 	"rlstdc.h"
 	"rltypedefs.h"
-	<stdio.h>
 	<readline/rlstdc.h>
 	<readline/rltypedefs.h>
 
-1175682679 /usr/include//assert.h
+1161543374 /usr/include//assert.h
 	<features.h>
 
-1175682684 /usr/include//math.h
+1161543400 /usr/include//math.h
 	<features.h>
 	<bits/huge_val.h>
 	<bits/huge_valf.h>
@@ -476,23 +476,23 @@
 	<bits/mathcalls.h>
 	<bits/mathinline.h>
 
-1175682684 /usr/include//bits/huge_val.h
+1161543402 /usr/include//bits/huge_val.h
 	<endian.h>
 
-1175682684 /usr/include//bits/huge_valf.h
+1161543402 /usr/include//bits/huge_valf.h
 
-1175682684 /usr/include//bits/huge_vall.h
+1161543402 /usr/include//bits/huge_vall.h
 
-1175682684 /usr/include//bits/inf.h
+1161543402 /usr/include//bits/inf.h
 
-1175682684 /usr/include//bits/nan.h
+1161543402 /usr/include//bits/nan.h
 	<endian.h>
 
-1175682684 /usr/include//bits/mathdef.h
+1161543403 /usr/include//bits/mathdef.h
 
-1175682684 /usr/include//bits/mathcalls.h
+1161543402 /usr/include//bits/mathcalls.h
 
-1175682684 /usr/include//bits/mathinline.h
+1161543402 /usr/include//bits/mathinline.h
 
 1162578714 /usr/include//lua5.1/lauxlib.h
 	<stddef.h>
@@ -507,4 +507,107 @@
 	<lua5.1/lua.h>
 	<lua5.1/lualib.h>
 	<lua5.1/lauxlib.h>
+
+1177288202 source:/home/guv/workspace/tessa/src/TessaCore.cpp
+	<wx/wx.h>
+	"TessaCore.h"
+	"TessaGUIServices.h"
+
+1177288202 /home/guv/workspace/tessa/src/TessaCore.h
+	<wx/wx.h>
+	"LuaInterface.h"
+
+1177288291 /home/guv/workspace/tessa/src/LuaInterface.h
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+	"TessaGUIServices.h"
+
+1153449076 /usr/include//lua.h
+	<stdarg.h>
+	<stddef.h>
+	"luaconf.h"
+
+1153449076 /usr/include//luaconf.h
+	<limits.h>
+	<stddef.h>
+	<unistd.h>
+	<io.h>
+	<stdio.h>
+	<stdio.h>
+	<readline/readline.h>
+	<readline/history.h>
+	<assert.h>
+	<math.h>
+	<unistd.h>
+
+1170693119 /usr/include//linux/compiler.h
+	<linux/compiler-gcc4.h>
+	<linux/compiler-gcc3.h>
+	<linux/compiler-intel.h>
+
+1170693119 /usr/include//linux/compiler-gcc4.h
+	<linux/compiler-gcc.h>
+
+1170693119 /usr/include//linux/compiler-gcc.h
+
+1170693119 /usr/include//linux/compiler-gcc3.h
+	<linux/compiler-gcc.h>
+
+1170693119 /usr/include//linux/compiler-intel.h
+	<asm/intrinsics.h>
+
+1161543461 /usr/include//memory.h
+	<features.h>
+	<string.h>
+
+1161543461 /usr/include//strings.h
+	<features.h>
+	<stddef.h>
+
+1153449076 /usr/include//lauxlib.h
+	<stddef.h>
+	<stdio.h>
+	"lua.h"
+
+1153449076 /usr/include//lualib.h
+	"lua.h"
+
+1177288202 /home/guv/workspace/tessa/src/TessaGUIServices.h
+
+1177288202 source:/home/guv/workspace/tessa/src/tessaApp.cpp
+	"wx_pch.h"
+	"tessaApp.h"
+	"tessaMain.h"
+	<wx/image.h>
+
+1177288202 /home/guv/workspace/tessa/src/tessaApp.h
+	<wx/wxprec.h>
+	<wx/wx.h>
+	"TessaCore.h"
+
+1177288202 /home/guv/workspace/tessa/src/tessaMain.h
+	"tessaApp.h"
+	<wx/frame.h>
+	<wx/menu.h>
+	<wx/statusbr.h>
+	<wx/treectrl.h>
+
+1177288202 source:/home/guv/workspace/tessa/src/tessaMain.cpp
+	"wx_pch.h"
+	"tessaMain.h"
+	<wx/bitmap.h>
+	<wx/font.h>
+	<wx/fontenum.h>
+	<wx/fontmap.h>
+	<wx/image.h>
+	<wx/intl.h>
+	<wx/settings.h>
+	"TessaGUIServices.h"
+
+1177289182 source:/home/guv/workspace/tessa/src/LuaInterface.cpp
+	"LuaInterface.h"
+	<lua.h>
+	<lualib.h>
+	<lauxlib.h>
 
