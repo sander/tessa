@@ -134,5 +134,6 @@ void tessaRoster::OnAbout(wxCommandEvent& event)
 
 void tessaRoster::SvcContactStatusChanged(wxCommandEvent& event)
 {
+    printf("t%d\n", event.GetEventType());
     RosterList->AppendItem(RosterRootNode, event.GetString());
 }

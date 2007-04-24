@@ -13,13 +13,13 @@ wxThread::ExitCode TessaCoreThread::Entry()
     wxPostEvent(GUIThread, evt);
     evt.SetString(_T("niekie2!"));
     wxPostEvent(GUIThread, evt);
-    RunScript("Tessa.lua");
+    RunScript("scripts/core.lua");
     while(1) {};
 }
 
 void TessaCoreThread::PostEvent(int EventID, CoreEventData* Data)
 {
-    wxCommandEvent evt(TessaGUIServices::ContactStatusChanged, OurID);
+    wxCommandEvent evt(EventID, OurID);
     evt.SetString(::wxString(Data->string, wxConvUTF8));
     wxPostEvent(GUIThread, evt);
 }
