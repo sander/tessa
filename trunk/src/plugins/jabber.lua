@@ -28,7 +28,8 @@ function onGlobalStatusChange(newstatus)
 				core:error("Connecting");
 				-- return; 
 			end
-			client:setPresence(statusmap[(newstatus.status or "online")], newstatus.priority or 0, newstatus.msg or "");
+--			The following must be done AFTER we are connected, not here
+--			client:setPresence(statusmap[(newstatus.status or "online")], newstatus.priority or 0, newstatus.msg or "");
 			
 		end
 end
