@@ -1,0 +1,4 @@
+return {
+  ["jid"] = "user@localhost",
+  ["password"] = "mypass",
+}
