@@ -38,7 +38,7 @@
 		</Compiler>
 		<Linker>
 			<Add option="`wx-config --libs`" />
-			<Add library="lua" />
+			<Add library="liblua5.1.a" />
 			<Add directory="/usr/lib/" />
 		</Linker>
 		<Unit filename="src/LuaInterface.cpp">

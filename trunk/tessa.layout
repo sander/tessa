@@ -5,10 +5,10 @@
 		<Cursor position="638" topLine="0" />
 	</File>
 	<File name="src/LuaInterface.h" open="1" top="0" tabpos="5">
-		<Cursor position="354" topLine="0" />
+		<Cursor position="659" topLine="0" />
 	</File>
 	<File name="src/TessaCore.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="658" topLine="0" />
+		<Cursor position="635" topLine="0" />
 	</File>
 	<File name="src/TessaCore.h" open="1" top="0" tabpos="4">
 		<Cursor position="559" topLine="0" />
@@ -20,6 +20,6 @@
 		<Cursor position="465" topLine="0" />
 	</File>
 	<File name="src/tessaMain.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="3402" topLine="84" />
+		<Cursor position="3883" topLine="84" />
 	</File>
 </CodeBlocks_layout_file>
