@@ -6,6 +6,8 @@
 --
 -- See http://lua-users.org/wiki/JoshuaWise for a usage example.
 
+-- Note from MattJ... I know a better way to do this. Involving recursion, and the 'and' operator. It also allows use to return values, unlike this one.
+
 hooks = {}
 function hooks:new()
 	local o = {}

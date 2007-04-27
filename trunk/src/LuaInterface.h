@@ -8,7 +8,15 @@ extern "C" {
 }
 #include "TessaGUIServices.h"
 
+#include <map>
+#include <string>
+//#include <gloox/TessaInterface.h>
+#include <gloox/tessa.h>
+
 int lcPostEvent(lua_State* L);
+int FireLuaEvent(char* name, std::map<std::string, LuaValue>* m);
+
+extern lua_State* L;
 
 typedef struct
 {
@@ -31,12 +39,15 @@ class LuaInterface
     protected:
         int RunScript(char* fn)
         {
-            lua_State* L = luaL_newstate();
+            ::L = luaL_newstate();
             luaL_openlibs(L);
 
             lua_pushlightuserdata(L, this);
             lua_pushcclosure(L, lcPostEvent, 1);
             lua_setglobal(L, "GUI_PostEvent");
+            printf("FLE: %p, %d\n", FireLuaEvent, FireLuaEvent);
+            lua_pushnumber(L, (int)FireLuaEvent);
+            lua_setglobal(L, "FireLuaEvent");
 
             if(luaL_dofile(L, fn))
             {

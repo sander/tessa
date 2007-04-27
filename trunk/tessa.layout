@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="src/LuaInterface.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="638" topLine="0" />
+	<File name="src/LuaInterface.cpp" open="1" top="1" tabpos="7">
+		<Cursor position="930" topLine="0" />
 	</File>
 	<File name="src/LuaInterface.h" open="1" top="0" tabpos="5">
-		<Cursor position="659" topLine="0" />
+		<Cursor position="384" topLine="0" />
 	</File>
-	<File name="src/TessaCore.cpp" open="1" top="1" tabpos="1">
+	<File name="src/TessaCore.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="635" topLine="0" />
 	</File>
 	<File name="src/TessaCore.h" open="1" top="0" tabpos="4">

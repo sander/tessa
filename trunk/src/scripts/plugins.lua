@@ -64,6 +64,8 @@ function plugins:initialise(env)
 				
 	
 	env.GUI_PostEvent = GUI_PostEvent;
+	env.FireLuaEvent = FireLuaEvent;
+	env.swig_type = swig_type;
 	env.setmetatable = setmetatable;
 	env.getmetatable = getmetatable;
 	
