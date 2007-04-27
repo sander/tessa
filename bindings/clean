@@ -1,0 +1,2 @@
+rm *.o
+rm gloox_wrap.cxx
