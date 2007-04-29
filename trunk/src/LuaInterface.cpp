@@ -26,12 +26,53 @@ int lcPostEvent(lua_State* L)
     return 0;
 }
 
-int FireLuaEvent(char* name, std::map<std::string, LuaValue>* m)
+int FireLuaEvent(char* name, const std::map<std::string, LuaValue>* m)
 {
     lua_getglobal(L, "events");
     lua_getfield(L, -1, "fire");
+
+    lua_getglobal(L, "events");
     lua_pushstring(L, name);
-    lua_pcall(L, 1, 0, 0);
+
+    if(m)
+    {
+        lua_newtable(L); // Create a new table that will be passed to the event handlers
+
+        std::map<std::string, LuaValue>::const_iterator it;
+        for (it=m->begin(); it != m->end(); it++)
+        {
+            std::string name = (*it).first;
+            LuaValue value = (*it).second;
+
+            switch(value.GetType())
+            {
+                case LuaValue::NUMBER:
+                    lua_pushnumber(L, value.GetNumber());
+                    break;
+                case LuaValue::STRING:
+                    lua_pushstring(L, value.GetString().c_str());
+                    break;
+                case LuaValue::BOOLEAN:
+                    lua_pushboolean(L, value.GetBool());
+                    break;
+                default:
+                    continue;
+            }
+
+            lua_setfield(L, -2, name.c_str());
+        }
+    }
+    else
+    {
+        lua_pushnil(L);
+    }
+
+    if(lua_pcall(L, 3, 0, 0))
+    {
+        printf("%s\n", lua_tostring(L, -1));
+        lua_pop(L, 1);
+    }
     lua_pop(L, 1);
+
     return 0;
 }

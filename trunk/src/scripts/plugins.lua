@@ -47,7 +47,7 @@ function plugins:initialise(env)
 					print("l2", type(l));
 					return _G[m];
 				end;
-	env.beep = function() print("*BEEP*"); end --function (f, l, r) os.execute(string.format("beep -f %d -l %d -r %d", f or 600, l or 75, r or 1)); end
+	env.beep = function (f, l, r) os.execute(string.format("beep -f %d -l %d -r %d", f or 600, l or 75, r or 1)); end
 	--[[function (m)
 					local env = getfenv(2); -- Get the plugin's environment
 					local f = package.loadlib (m..".so", "luaopen_"..m)

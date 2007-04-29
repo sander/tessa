@@ -18,14 +18,13 @@ private:
 	FireLuaEventFunction luaCall;
 
 public:
-	DefaultConnectionListener(int FLE) : luaCall((FireLuaEventFunction)FLE) { printf("Listener created (%p)\n", FLE); system("beep"); };
+	DefaultConnectionListener(int FLE) : luaCall((FireLuaEventFunction)FLE) { printf("Listener created (%p)\n", FLE); };
 
 	virtual void onConnect()
 
 	{
-		printf("Connected\n");
 		luaCall("Events/Network/Jabber/Connected", NULL);
-
+		printf("Connected\n");
 	}
 
 	virtual void onDisconnect( gloox::ConnectionError e )
@@ -91,6 +90,8 @@ public:
 		m["CertCompression"] = info.compression;
 
 		luaCall("Events/Network/Jabber/TLSConnect", &m);
+		
+		return true;
 
 	}
 
