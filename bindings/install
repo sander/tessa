@@ -1,0 +1,2 @@
+mkdir -p /usr/local/lib/lua/5.1/
+cp gloox.so /usr/local/lib/lua/5.1/

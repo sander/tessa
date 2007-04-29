@@ -3,8 +3,11 @@ dofile("scripts/utils.lua.inc");
 core = { };
 
 function core:error(etype, msg)
-	--printf("ERROR: %s",msg);
 	print("ERROR: " ..(msg or etype or "Unknown error"));
+end
+
+function core:log(message)
+	print(message);
 end
 
 function core:run()

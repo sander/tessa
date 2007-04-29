@@ -11,10 +11,10 @@ extern "C" {
 #include <map>
 #include <string>
 //#include <gloox/TessaInterface.h>
-#include <gloox/tessa.h>
+#include "../bindings/gloox/TessaInterface.h"
 
 int lcPostEvent(lua_State* L);
-int FireLuaEvent(char* name, std::map<std::string, LuaValue>* m);
+int FireLuaEvent(char* name, const std::map<std::string, LuaValue>* m);
 
 extern lua_State* L;
 

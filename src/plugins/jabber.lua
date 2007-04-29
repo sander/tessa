@@ -25,14 +25,18 @@ function onGlobalStatusChange(newstatus)
 				jid = gloox.JID(configs:get("jid") or core:error("NOLOGIN", "No JID in configs"));
 				client = gloox.Client(jid, configs:get("password"));
 				eventhandler = gloox.DefaultConnectionListener(FireLuaEvent);
-				--print("swig_type", gloox.swig_type(eventhandler), gloox.swig_type(FireLuaEvent));
+				--rosterhandler = gloox.DefaultRosterListener(FireLuaEvent);
+				rosterlistener = gloox.DefaultRosterListener(FireLuaEvent);
+				
 				client:registerConnectionListener(eventhandler);
+				client:rosterManager():registerRosterListener(rosterlistener);
+				local inf = {};
+				inf.handle = events:subscribe("Events/Network/Jabber/Connected",	function ()
+																			client:setPresence(statusmap[(newstatus.status or "online")], newstatus.priority or 0, newstatus.msg or "");
+																			events:unsubscribe("Events/Network/Jabber/Connected", inf.handle)
+																		end);
 				client:connect(false);
-				print("Connecting...");
-				events:subscribe("Events/Network/Jabber/Connected",	function ()
-																client:setPresence(statusmap[(newstatus.status or "online")], newstatus.priority or 0, newstatus.msg or ""); 
-																events:unsubscribe()
-															end);
+				core:log("Connecting...");
 				return; 
 			end
 			client:setPresence(statusmap[(newstatus.status or "online")], newstatus.priority or 0, newstatus.msg or "");
@@ -42,7 +46,6 @@ end
 
 function onRun()
 	if client and status ~= "offline" then
---		core:error("Recv");
 		client:recv(1000);
 	end
 end
@@ -54,6 +57,9 @@ events:create("Events/Network/Jabber/Disconnected");
 events:create("Events/Network/Jabber/TLSConnect");
 events:create("Events/Network/Jabber/ResourceError");
 events:create("Events/Network/Jabber/SessionBindError");
+
+events:create("Events/Network/Jabber/RosterContact");
+events:create("Events/Network/Jabber/GotRoster");
 
 events:subscribe("Events/Protocols/Global/StatusChange", onGlobalStatusChange);
 events:subscribe("Events/Core/Run", onRun);

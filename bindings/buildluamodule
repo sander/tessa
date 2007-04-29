@@ -45,7 +45,7 @@ LUA_INCLUDE_DIR=/usr/include/lua5.1/
 
 echo -e '\E[1;31m'"\033[1;47mGenerating binding code...\033[0m"
 #swig -lua -I/usr/local/include -ignoremissing -c++ gloox.i -o ${GLOOX_SRC_DIR%"/"}"src/gloox_wrap.cxx"
-swig -lua `gloox-config --cxxflags` -ignoremissing -c++ -I${GLOOX_BINDINGS_DIR%"/"}"/src/" -o gloox_wrap.cxx gloox/tessa.i
+swig -lua -Wall `gloox-config --cxxflags` -ignoremissing -c++ -I${GLOOX_BINDINGS_DIR%"/"}"/src/" -o gloox_wrap.cxx gloox/tessa.i
 
 #echo -e '\E[1;31m'"\033[1;47mInstalling into gloox...\033[0m"
 #cp gloox_wrap.cxx ../../gloox-0.9-rc1/src/

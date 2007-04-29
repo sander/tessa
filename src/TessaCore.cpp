@@ -8,13 +8,7 @@ void TessaLuaInterface(LuaInterface* Interface);
 
 wxThread::ExitCode TessaCoreThread::Entry()
 {
-    wxCommandEvent evt(TessaGUIServices::ContactStatusChanged, OurID);
-    evt.SetString(_T("TobiasFar!"));
-    wxPostEvent(GUIThread, evt);
-    evt.SetString(_T("niekie2!"));
-    wxPostEvent(GUIThread, evt);
     RunScript("scripts/core.lua");
-    while(1) {};
 }
 
 void TessaCoreThread::PostEvent(int EventID, CoreEventData* Data)

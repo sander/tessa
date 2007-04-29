@@ -107,10 +107,6 @@ tessaRoster::tessaRoster(wxWindow* parent,wxWindowID id)
     RosterList = new wxTreeCtrl(this, -1, wxPoint(0,0), GetClientSize(), wxTR_FULL_ROW_HIGHLIGHT|wxTR_NO_LINES|wxTR_HIDE_ROOT|wxTR_SINGLE);
 
     RosterRootNode = RosterList->AddRoot(_T("Roster"));
-    RosterList->AppendItem(RosterRootNode, _T("MattJ"));
-    RosterList->AppendItem(RosterRootNode, _T("waqas"));
-    RosterList->AppendItem(RosterRootNode, _T("Paul"));
-    RosterList->AppendItem(RosterRootNode, _T("niekie"));
 }
 
 tessaRoster::~tessaRoster()
