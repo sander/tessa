@@ -13,7 +13,7 @@ The Tessa SVN repository is where the Tessa development team keep a 'master copy
 
 Install the necessary libraries that Tessa depends upon, and the tools needed to download/build Tessa:
 
-`sudo aptitude install build-essential libwxgtk2.6-0 libwxgtk2.6-dev wx2.6-headers wx-common subversion`
+`sudo aptitude install build-essential libwxgtk2.6-0 libwxgtk2.6-dev wx2.6-headers wx-common subversion liblua5.1-dev liblua5.1`
 
 == Download the source ==
 
@@ -27,7 +27,7 @@ svn co http://tessa.googlecode.com/svn/trunk/ ~/Development/tessa
 
 {{{
 cd ~/Development/tessa/src
-g++ *.cpp `wx-config --cxxflags --libs` -o ../tessa
+g++ *.cpp -I/usr/include/lua5.1 `wx-config --cxxflags --libs`
 }}}
 
 *Update:* For the new network access, you must build and install the gloox bindings. See BuildingGlooxBindings for simple instructions.
