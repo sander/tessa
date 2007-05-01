@@ -28,7 +28,7 @@ Now:
 
 `nano buildluamodule`
 
-Change the paths near the top of the file as necessary. Press Ctrl+O, and then Ctrl+X to exit.
+Change the paths near the top of the file as necessary, to point to the extracted gloox source, and extracted gloox bindings folders. Press Ctrl+O to save, and then Ctrl+X to exit.
 
 Type:
 
