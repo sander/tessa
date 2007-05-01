@@ -22,7 +22,7 @@ You also need to install liblua5.1(-dev) and swig (a program to make the binding
 
 The building is handled by a single script. The only thing you have to do is tell it where you extracted gloox, and the gloox bindings to.
 
-`cd ~/Development/tessa/bindings' (Assuming that is where you downloaded the Tessa SVN to)
+`cd ~/Development/tessa/bindings` (Assuming that is where you downloaded the Tessa SVN to)
 
 Now:
 
