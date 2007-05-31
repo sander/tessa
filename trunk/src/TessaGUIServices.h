@@ -3,8 +3,11 @@
 
 namespace TessaGUIServices
 {
-    const int CoreError = 0;
-    const int ContactStatusChanged = 1;
+    enum
+    {
+        CoreError,
+        ContactAdd
+    };
 }
 
 #endif // TESSAGUISERVICES_H_INCLUDED

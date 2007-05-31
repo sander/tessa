@@ -8,11 +8,11 @@ lua_State* L;
 
 int lcPostEvent(lua_State* L)
 {
-    LuaInterface* IFObject = (LuaInterface*) lua_touserdata(L, lua_upvalueindex(1));
+    LuaInterface* IFObject = (LuaInterface*) lua_touserdata(L, lua_upvalueindex(1)); // Here we get the address of the interface
     CoreEventData Event;
     if(!lua_isnumber(L, 1) || !lua_istable(L, 2))
     {
-        lua_pushboolean(L, false);
+        lua_pushboolean(L, false);// Return false (error) invalid types were passed
         return 1;
     }
     int id = lua_tonumber(L, 1);

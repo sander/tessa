@@ -58,8 +58,9 @@ events:create("Events/Network/Jabber/TLSConnect");
 events:create("Events/Network/Jabber/ResourceError");
 events:create("Events/Network/Jabber/SessionBindError");
 
-events:create("Events/Network/Jabber/RosterContact");
-events:create("Events/Network/Jabber/GotRoster");
+events:create("Events/Network/Jabber/Roster/Contact");
+events:create("Events/Network/Jabber/Roster/Retrieved");
+events:create("Events/Network/Jabber/Roster/Presence");
 
 events:subscribe("Events/Protocols/Global/StatusChange", onGlobalStatusChange);
 events:subscribe("Events/Core/Run", onRun);

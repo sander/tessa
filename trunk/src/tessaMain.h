@@ -31,7 +31,7 @@ class tessaRoster: public wxFrame
 		//(*Handlers(tessaRoster)
 		void OnQuit(wxCommandEvent& event);
 		void OnAbout(wxCommandEvent& event);
-		void SvcContactStatusChanged(wxCommandEvent& event);
+		void SvcContactAdd(wxCommandEvent& event);
 		//*)
 
 		//(*Identifiers(tessaRoster)
