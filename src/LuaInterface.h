@@ -18,13 +18,7 @@ int FireLuaEvent(char* name, const std::map<std::string, LuaValue>* m);
 
 extern lua_State* L;
 
-typedef struct
-{
-    const char* contact; // Contact's UID (NOT JID!!!)
-    int status;
-    const char* string;
-
-} CoreEventData;
+typedef std::map<std::string, LuaValue> CoreEventData;
 
 class LuaInterface
 {
@@ -52,7 +46,8 @@ class LuaInterface
             if(luaL_dofile(L, fn))
             {
                 printf("Unrecoverable error in Tessa core script!\n\tError: %s\n", lua_tostring(L, -1));
-                CoreEventData ErrorData = { NULL, 0, lua_tostring(L, -1) };
+                CoreEventData ErrorData;
+                ErrorData["string"] = lua_tostring(L, -1);
                 PostEvent(TessaGUIServices::CoreError, &ErrorData);
             }
             return 0;

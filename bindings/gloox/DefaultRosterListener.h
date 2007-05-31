@@ -30,11 +30,10 @@ public:
 			m["JID"] = contact->jid();
 			m["DisplayName"] = contact->name();
 			m["Online"] = contact->online();
-			luaCall("Events/Network/Jabber/RosterContact", &m);
+			luaCall("Events/Network/Jabber/Roster/Contact", &m);
 		}
 
-		luaCall("Events/Network/Jabber/GotRoster", NULL);
-		printf("Connected\n");
+		luaCall("Events/Network/Jabber/Roster/Retrieved", NULL);
 	}
 	
 	virtual void handleItemAdded  	(  	const gloox::JID &   	 jid  	 ) {}
@@ -42,11 +41,17 @@ public:
 	virtual void handleItemRemoved  	(  	const gloox::JID &   	 jid  	 ) {}
 	virtual void handleItemUpdated  	(  	const gloox::JID &   	 jid  	 ) {}
 	virtual void handleItemUnsubscribed  (	const gloox::JID &   	 jid  	 ) {}
-	virtual void handleRosterPresence  	(  	const gloox::RosterItem &   	 item,
-		const std::string &  	resource,
-		gloox::Presence  	presence,
-		const std::string &  	msg	 
-	)  {}
+	virtual void handleRosterPresence(const gloox::RosterItem& contact, const std::string& resource, gloox::Presence presence, const std::string& msg)
+	{
+		std::map<std::string, LuaValue> m;
+		m["JID"] = contact.jid();
+		m["DisplayName"] = contact.name();
+		m["Online"] = contact.online();
+		m["Resource"] = resource;
+		m["Status"] = (int)presence;
+		m["StatusMsg"] = msg;
+		luaCall("Events/Network/Jabber/Roster/Presence", &m);
+	}
 	
 	virtual void handleSelfPresence  	(  	const gloox::RosterItem &   	 item,
 		const std::string &  	resource,

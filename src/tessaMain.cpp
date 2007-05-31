@@ -72,7 +72,7 @@ const long tessaRoster::idMenuStatusChat = wxNewId();
 BEGIN_EVENT_TABLE(tessaRoster,wxFrame)
 	//(*EventTable(tessaRoster)
 	EVT_MENU    (tessaRoster::idMenuQuit, tessaRoster::OnQuit)
-	EVT_COMMAND (wxID_CORETHREAD, TessaGUIServices::ContactStatusChanged, tessaRoster::SvcContactStatusChanged)
+	EVT_COMMAND (wxID_CORETHREAD, TessaGUIServices::ContactAdd, tessaRoster::SvcContactAdd)
 	//*)
 END_EVENT_TABLE()
 
@@ -128,7 +128,7 @@ void tessaRoster::OnAbout(wxCommandEvent& event)
 
 // GUI Services
 
-void tessaRoster::SvcContactStatusChanged(wxCommandEvent& event)
+void tessaRoster::SvcContactAdd(wxCommandEvent& event)
 {
     printf("t%d\n", event.GetEventType());
     RosterList->AppendItem(RosterRootNode, event.GetString());
