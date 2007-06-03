@@ -6,6 +6,7 @@
 
 lua_State* L;
 
+// This is GUI_PostEvent function in Lua
 int lcPostEvent(lua_State* L)
 {
     LuaInterface* IFObject = (LuaInterface*) lua_touserdata(L, lua_upvalueindex(1)); // Here we get the address of the interface
@@ -17,11 +18,11 @@ int lcPostEvent(lua_State* L)
     }
     int id = lua_tonumber(L, 1);
     lua_getfield(L, 2, "contact");
-    Event.contact = lua_tostring(L, -1);
+    Event["contact"] = lua_tostring(L, -1);
     lua_getfield(L, 2, "string");
-    Event.string = lua_tostring(L, -1);
+    Event["string"] = lua_tostring(L, -1);
     lua_getfield(L, 2, "status"); // Really should use lua_opt for this
-    Event.status = lua_tonumber(L, -1);
+    Event["status"] = (int)lua_tonumber(L, -1);
     IFObject->PostEvent(id, &Event);
     return 0;
 }
