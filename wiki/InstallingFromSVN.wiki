@@ -27,7 +27,7 @@ svn co http://tessa.googlecode.com/svn/trunk/ ~/Development/tessa
 
 {{{
 cd ~/Development/tessa/src
-g++ *.cpp -I/usr/include/lua5.1 `wx-config --cxxflags --libs`
+g++ *.cpp -I/usr/include/lua5.1 `wx-config --cxxflags --libs`-llua5.1 -o tessa
 }}}
 
 *Update:* For the new network access, you must build and install the gloox bindings. See BuildingGlooxBindings for simple instructions.
