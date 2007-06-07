@@ -31,27 +31,7 @@ class LuaInterface
         {
         }
     protected:
-        int RunScript(char* fn)
-        {
-            ::L = luaL_newstate();
-            luaL_openlibs(L);
-
-            lua_pushlightuserdata(L, this);
-            lua_pushcclosure(L, lcPostEvent, 1);
-            lua_setglobal(L, "GUI_PostEvent");
-            printf("FLE: %p, %d\n", FireLuaEvent, FireLuaEvent);
-            lua_pushnumber(L, (int)FireLuaEvent);
-            lua_setglobal(L, "FireLuaEvent");
-
-            if(luaL_dofile(L, fn))
-            {
-                printf("Unrecoverable error in Tessa core script!\n\tError: %s\n", lua_tostring(L, -1));
-                CoreEventData ErrorData;
-                ErrorData["string"] = lua_tostring(L, -1);
-                PostEvent(TessaGUIServices::CoreError, &ErrorData);
-            }
-            return 0;
-        }
+        int RunScript(char* fn);
     public:
         virtual void PostEvent(int EventID, CoreEventData* data) = 0;
 };

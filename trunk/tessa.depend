@@ -39,16 +39,18 @@
 
 1177097410 /home/matthew/dev/tessa/TessaGUIServices.h
 
-1177808029 source:/home/matthew/dev/tessa/src/TessaCore.cpp
+1181227239 source:/home/matthew/dev/tessa/src/TessaCore.cpp
 	<wx/wx.h>
 	"TessaCore.h"
 	"TessaGUIServices.h"
+	"../bindings/gloox/TessaInterface.h"
 
 1177257619 /home/matthew/dev/tessa/src/TessaCore.h
 	<wx/wx.h>
 	"LuaInterface.h"
 
-1178073643 /home/matthew/dev/tessa/src/TessaGUIServices.h
+1181224079 /home/matthew/dev/tessa/src/TessaGUIServices.h
+	<wx/wx.h>
 
 1177111558 source:/home/matthew/dev/tessa/src/tessaApp.cpp
 	"wx_pch.h"
@@ -61,14 +63,14 @@
 	<wx/wx.h>
 	"TessaCore.h"
 
-1178073679 /home/matthew/dev/tessa/src/tessaMain.h
+1181224728 /home/matthew/dev/tessa/src/tessaMain.h
 	"tessaApp.h"
 	<wx/frame.h>
 	<wx/menu.h>
 	<wx/statusbr.h>
 	<wx/treectrl.h>
 
-1177807978 source:/home/matthew/dev/tessa/src/tessaMain.cpp
+1181226910 source:/home/matthew/dev/tessa/src/tessaMain.cpp
 	"wx_pch.h"
 	"tessaMain.h"
 	<wx/bitmap.h>
@@ -80,7 +82,7 @@
 	<wx/settings.h>
 	"TessaGUIServices.h"
 
-1178074235 /home/matthew/dev/tessa/src/LuaInterface.h
+1181227187 /home/matthew/dev/tessa/src/LuaInterface.h
 	<lua.h>
 	<lauxlib.h>
 	<lualib.h>
@@ -505,7 +507,7 @@
 1162578714 /usr/include//lua5.1/lualib.h
 	"lua.h"
 
-1177807515 source:/home/matthew/dev/tessa/src/LuaInterface.cpp
+1181227055 source:/home/matthew/dev/tessa/src/LuaInterface.cpp
 	"LuaInterface.h"
 	<lua.h>
 	<lualib.h>
@@ -640,5 +642,5 @@
 1162578714 /usr/include/lua5.1/lualib.h
 	"lua.h"
 
-1177793614 /home/matthew/dev/tessa/bindings/gloox/TessaInterface.h
+1181226888 /home/matthew/dev/tessa/bindings/gloox/TessaInterface.h
 

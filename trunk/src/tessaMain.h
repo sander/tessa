@@ -31,7 +31,9 @@ class tessaRoster: public wxFrame
 		//(*Handlers(tessaRoster)
 		void OnQuit(wxCommandEvent& event);
 		void OnAbout(wxCommandEvent& event);
-		void SvcContactAdd(wxCommandEvent& event);
+		void SvcUpdateContactStatus(wxCommandEvent& event);
+		virtual bool ProcessEvent(wxEvent& event);
+		bool ProcessLuaEvent(wxCommandEvent& event);
 		//*)
 
 		//(*Identifiers(tessaRoster)

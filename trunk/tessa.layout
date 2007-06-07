@@ -2,13 +2,13 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="src/LuaInterface.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="426" topLine="3" />
+		<Cursor position="1137" topLine="0" />
 	</File>
 	<File name="src/LuaInterface.h" open="1" top="0" tabpos="5">
-		<Cursor position="862" topLine="4" />
+		<Cursor position="414" topLine="0" />
 	</File>
-	<File name="src/TessaCore.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="508" topLine="0" />
+	<File name="src/TessaCore.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="403" topLine="0" />
 	</File>
 	<File name="src/TessaCore.h" open="1" top="0" tabpos="4">
 		<Cursor position="559" topLine="0" />
@@ -17,12 +17,12 @@
 		<Cursor position="164" topLine="0" />
 	</File>
 	<File name="src/tessaApp.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="465" topLine="0" />
+		<Cursor position="755" topLine="0" />
 	</File>
-	<File name="src/tessaMain.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="1292" topLine="30" />
+	<File name="src/tessaMain.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="2319" topLine="72" />
 	</File>
 	<File name="src/tessaMain.h" open="1" top="0" tabpos="8">
-		<Cursor position="816" topLine="9" />
+		<Cursor position="894" topLine="10" />
 	</File>
 </CodeBlocks_layout_file>

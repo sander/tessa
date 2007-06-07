@@ -18,17 +18,19 @@ public:
 
 	LuaValue() {}
 
-	LuaValue(int a) : type(NUMBER), ival(a) {}
+	LuaValue(int a) : type(NUMBER), ival(a) { }
 
-	LuaValue(std::string a) : type(STRING), sval(a) {}
+	LuaValue(std::string& a) : type(STRING), sval(a) { }
 
-	LuaValue(bool a) : type(BOOLEAN), bval(a) {}
+	LuaValue(char* a)   :   type(STRING), sval(a) { }
+
+	LuaValue(bool a) : type(BOOLEAN), bval(a) { }
 
 	int GetType() {return type;}
 
 	bool GetBool() {return bval;}
 
-	std::string GetString() {return sval;}
+	std::string GetString() { return sval;}
 
 	int GetNumber() {return ival;}
 
