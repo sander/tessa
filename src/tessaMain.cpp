@@ -72,7 +72,7 @@ const long tessaRoster::idMenuStatusChat = wxNewId();
 BEGIN_EVENT_TABLE(tessaRoster,wxFrame)
 	//(*EventTable(tessaRoster)
 	EVT_MENU    (tessaRoster::idMenuQuit, tessaRoster::OnQuit)
-	EVT_COMMAND (wxID_CORETHREAD, TessaGUIServices::ContactAdd, tessaRoster::SvcContactAdd)
+	EVT_COMMAND (wxID_ANY, wxEVT_LUA_EVENT, tessaRoster::SvcUpdateContactStatus)
 	//*)
 END_EVENT_TABLE()
 
@@ -128,8 +128,27 @@ void tessaRoster::OnAbout(wxCommandEvent& event)
 
 // GUI Services
 
-void tessaRoster::SvcContactAdd(wxCommandEvent& event)
+void tessaRoster::SvcUpdateContactStatus(wxCommandEvent& event)
 {
-    printf("t%d\n", event.GetEventType());
-    RosterList->AppendItem(RosterRootNode, event.GetString());
+    RosterList->AppendItem(RosterRootNode, wxString((*(CoreEventData*)event.GetClientData())["string"].GetString().c_str(), wxConvUTF8));
+}
+
+bool tessaRoster::ProcessEvent(wxEvent& event)
+{
+    if(event.GetEventType() == wxEVT_LUA_EVENT)
+        return ProcessLuaEvent((wxCommandEvent&) event);
+    return wxEvtHandler::ProcessEvent(event);
+}
+
+bool tessaRoster::ProcessLuaEvent(wxCommandEvent& event)
+{
+    switch(event.GetInt())
+    {
+        case TessaGUIServices::UpdateContactStatus:
+            SvcUpdateContactStatus(event);
+            break;
+        default:
+            return false;
+    }
+    return true;
 }

@@ -7,16 +7,19 @@
 
 void TessaLuaInterface(LuaInterface* Interface);
 
+DEFINE_EVENT_TYPE(wxEVT_LUA_EVENT)
+
 wxThread::ExitCode TessaCoreThread::Entry()
 {
-    RunScript("scripts/core.lua");
+    return (wxThread::ExitCode)RunScript("scripts/core.lua");
 }
 
 void TessaCoreThread::PostEvent(int EventID, CoreEventData* Data)
 {
-    wxCommandEvent evt(EventID, OurID);
+    wxCommandEvent evt(wxEVT_LUA_EVENT, OurID);
     CoreEventData *dupData = new CoreEventData(*Data);
-    //evt.SetString(::wxString((*dupData)["string"].GetString(), wxConvUTF8));
+    evt.SetInt(EventID);
+    evt.SetString(::wxString((*dupData)["string"].GetString().c_str(), wxConvUTF8));
     evt.SetClientData((void*)dupData);
     wxPostEvent(GUIThread, evt);
 }
