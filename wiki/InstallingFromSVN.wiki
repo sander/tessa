@@ -15,6 +15,11 @@ Install the necessary libraries that Tessa depends upon, and the tools needed to
 
 `sudo aptitude install build-essential libwxgtk2.6-0 libwxgtk2.6-dev wx2.6-headers wx-common subversion liblua5.1-dev liblua5.1`
 
+=== Note ===
+When not installing in the usual location (/bin,/usr/local,/usr/include, but some other path like /usr/local/):
+
+You might need to log out and back in, or start a new terminal emulator after you install packages suck as gloox or wxgtk, before you run the script that builds the gloox bindings, because you might not have gloox-config in your PATH. Otherwise edit your PATH environment variable and you don't have to log out and back in.
+
 == Download the source ==
 
 {{{
