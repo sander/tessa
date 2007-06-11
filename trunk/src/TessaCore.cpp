@@ -14,10 +14,10 @@ wxThread::ExitCode TessaCoreThread::Entry()
     return (wxThread::ExitCode)RunScript("scripts/core.lua");
 }
 
-void TessaCoreThread::PostEvent(int EventID, CoreEventData* Data)
+void TessaCoreThread::PostEvent(int EventID, LuaTable* Data)
 {
     wxCommandEvent evt(wxEVT_LUA_EVENT, OurID);
-    CoreEventData *dupData = new CoreEventData(*Data);
+    LuaTable *dupData = new LuaTable(*Data);
     evt.SetInt(EventID);
     evt.SetString(::wxString((*dupData)["string"].GetString().c_str(), wxConvUTF8));
     evt.SetClientData((void*)dupData);

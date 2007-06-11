@@ -39,17 +39,17 @@
 
 1177097410 /home/matthew/dev/tessa/TessaGUIServices.h
 
-1181227239 source:/home/matthew/dev/tessa/src/TessaCore.cpp
+1181318281 source:/home/matthew/dev/tessa/src/TessaCore.cpp
 	<wx/wx.h>
 	"TessaCore.h"
 	"TessaGUIServices.h"
 	"../bindings/gloox/TessaInterface.h"
 
-1177257619 /home/matthew/dev/tessa/src/TessaCore.h
+1181318381 /home/matthew/dev/tessa/src/TessaCore.h
 	<wx/wx.h>
 	"LuaInterface.h"
 
-1181224079 /home/matthew/dev/tessa/src/TessaGUIServices.h
+1181318381 /home/matthew/dev/tessa/src/TessaGUIServices.h
 	<wx/wx.h>
 
 1177111558 source:/home/matthew/dev/tessa/src/tessaApp.cpp
@@ -63,14 +63,14 @@
 	<wx/wx.h>
 	"TessaCore.h"
 
-1181224728 /home/matthew/dev/tessa/src/tessaMain.h
+1181317797 /home/matthew/dev/tessa/src/tessaMain.h
 	"tessaApp.h"
 	<wx/frame.h>
 	<wx/menu.h>
 	<wx/statusbr.h>
 	<wx/treectrl.h>
 
-1181226910 source:/home/matthew/dev/tessa/src/tessaMain.cpp
+1181318281 source:/home/matthew/dev/tessa/src/tessaMain.cpp
 	"wx_pch.h"
 	"tessaMain.h"
 	<wx/bitmap.h>
@@ -82,7 +82,7 @@
 	<wx/settings.h>
 	"TessaGUIServices.h"
 
-1181227187 /home/matthew/dev/tessa/src/LuaInterface.h
+1181318281 /home/matthew/dev/tessa/src/LuaInterface.h
 	<lua.h>
 	<lauxlib.h>
 	<lualib.h>
@@ -139,7 +139,7 @@
 1175682703 /usr/include//bits/local_lim.h
 	<linux/limits.h>
 
-1179888444 /usr/include//linux/limits.h
+1181251211 /usr/include//linux/limits.h
 
 1175682703 /usr/include//bits/posix2_lim.h
 
@@ -321,22 +321,22 @@
 1175682687 /usr/include//bits/sigcontext.h
 	<asm/sigcontext.h>
 
-1179888442 /usr/include//asm/sigcontext.h
+1181251208 /usr/include//asm/sigcontext.h
 	<asm-x86_64/sigcontext.h>
 	<asm-i386/sigcontext.h>
 
-1179888441 /usr/include//asm-x86_64/sigcontext.h
+1181251208 /usr/include//asm-x86_64/sigcontext.h
 	<asm/types.h>
 
-1179888442 /usr/include//asm/types.h
+1181251208 /usr/include//asm/types.h
 	<asm-x86_64/types.h>
 	<asm-i386/types.h>
 
-1179888441 /usr/include//asm-x86_64/types.h
+1181251208 /usr/include//asm-x86_64/types.h
 
-1179888442 /usr/include//asm-i386/types.h
+1181251208 /usr/include//asm-i386/types.h
 
-1179888442 /usr/include//asm-i386/sigcontext.h
+1181251208 /usr/include//asm-i386/sigcontext.h
 
 1175682687 /usr/include//bits/sigstack.h
 
@@ -642,5 +642,7 @@
 1162578714 /usr/include/lua5.1/lualib.h
 	"lua.h"
 
-1181226888 /home/matthew/dev/tessa/bindings/gloox/TessaInterface.h
+1181567910 /home/matthew/dev/tessa/bindings/gloox/TessaInterface.h
+	<string>
+	<map>
 
