@@ -54,7 +54,7 @@ swig -lua -Wall `gloox-config --cxxflags` -ignoremissing -c++ -I${GLOOX_BINDINGS
 #popd
 
 echo -e '\E[1;31m'"\033[1;47mCompiling code...\033[0m"
-g++ -fpic -c ${GLOOX_SRC_DIR%"/"}/src/*.cpp gloox_wrap.cxx -I${LUA_INCLUDE_DIR} -Igloox/ `gloox-config --cxxflags`
+g++ -fpic -c ${GLOOX_SRC_DIR%"/"}/src/*.cpp gloox_wrap.cxx -I${LUA_INCLUDE_DIR} -Igloox -I${GLOOX_SRC_DIR%"/"}/src # `gloox-config --cxxflags`
 
 echo -e '\E[1;31m'"\033[1;47mBuilding Lua module...\033[0m"
 g++ -shared *.o `gloox-config --libs` -o gloox.so
