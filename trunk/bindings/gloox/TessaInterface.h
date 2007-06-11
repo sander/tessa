@@ -1,5 +1,9 @@
 #ifndef INC_LUAVALUE
 #define INC_LUAVALUE
+
+#include <string>
+#include <map>
+
 class LuaValue
 
 {
@@ -20,6 +24,7 @@ public:
 
 	LuaValue(int a) : type(NUMBER), ival(a) { }
 
+	LuaValue(std::string a) : type(STRING), sval(a) { }
 	LuaValue(std::string& a) : type(STRING), sval(a) { }
 
 	LuaValue(char* a)   :   type(STRING), sval(a) { }
