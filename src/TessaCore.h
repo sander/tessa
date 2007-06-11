@@ -21,7 +21,7 @@ class TessaCoreThread : wxThread, LuaInterface
         int OurID;
         virtual ExitCode Entry();
     public:
-        void PostEvent(int EventID, CoreEventData* Data);
+        void PostEvent(int EventID, LuaTable* Data);
 };
 
 #define wxID_CORETHREAD (wxID_HIGHEST + 1)

@@ -13,12 +13,20 @@ extern "C" {
 //#include <gloox/TessaInterface.h>
 #include "../bindings/gloox/TessaInterface.h"
 
+// Used to represent a Lua table
+typedef std::map<std::string, LuaValue> LuaTable;
+
+// For Lua to post events to the GUI
 int lcPostEvent(lua_State* L);
-int FireLuaEvent(char* name, const std::map<std::string, LuaValue>* m);
+// For Lua to retrieve GUI events
+void PostLuaEvent(std::string name, LuaTable& data);
+
+// Posting events to Lua...
+int FireLuaEvent(char* name, const std::map<std::string, LuaValue>* m); // Must only be called from main thread
+void PostLuaEvent(std::string name, LuaTable& data); // Thread-safe
+
 
 extern lua_State* L;
-
-typedef std::map<std::string, LuaValue> CoreEventData;
 
 class LuaInterface
 {
@@ -33,6 +41,6 @@ class LuaInterface
     protected:
         int RunScript(char* fn);
     public:
-        virtual void PostEvent(int EventID, CoreEventData* data) = 0;
+        virtual void PostEvent(int EventID, LuaTable* data) = 0;
 };
 #endif // LUAINTERFACE_H_INCLUDED

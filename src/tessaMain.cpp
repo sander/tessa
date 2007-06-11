@@ -72,6 +72,12 @@ const long tessaRoster::idMenuStatusChat = wxNewId();
 BEGIN_EVENT_TABLE(tessaRoster,wxFrame)
 	//(*EventTable(tessaRoster)
 	EVT_MENU    (tessaRoster::idMenuQuit, tessaRoster::OnQuit)
+	EVT_MENU    (tessaRoster::idMenuStatusOffline, tessaRoster::OnSelectStatus)
+	EVT_MENU    (tessaRoster::idMenuStatusOnline, tessaRoster::OnSelectStatus)
+	EVT_MENU    (tessaRoster::idMenuStatusAway, tessaRoster::OnSelectStatus)
+	EVT_MENU    (tessaRoster::idMenuStatusNA, tessaRoster::OnSelectStatus)
+	EVT_MENU    (tessaRoster::idMenuStatusDND, tessaRoster::OnSelectStatus)
+	EVT_MENU    (tessaRoster::idMenuStatusChat, tessaRoster::OnSelectStatus)
 	EVT_COMMAND (wxID_ANY, wxEVT_LUA_EVENT, tessaRoster::SvcUpdateContactStatus)
 	//*)
 END_EVENT_TABLE()
@@ -115,6 +121,9 @@ tessaRoster::~tessaRoster()
 	//*)
 }
 
+
+////////////////  Menu handlers  /////////////////////
+
 void tessaRoster::OnQuit(wxCommandEvent& event)
 {
     Close();
@@ -126,12 +135,23 @@ void tessaRoster::OnAbout(wxCommandEvent& event)
     wxMessageBox(msg, _("Welcome to..."));
 }
 
-// GUI Services
-
-void tessaRoster::SvcUpdateContactStatus(wxCommandEvent& event)
+void tessaRoster::OnSelectStatus(wxCommandEvent& event)
 {
-    RosterList->AppendItem(RosterRootNode, wxString((*(CoreEventData*)event.GetClientData())["string"].GetString().c_str(), wxConvUTF8));
+    // We will send an event to Lua to notify it
+
+    LuaTable EventData;
+    if(event.GetId() == idMenuStatusOffline)
+    {
+            EventData["status"] = "offline";
+    }
+    else
+    {
+            EventData["status"] = "online";
+    }
+    PostLuaEvent(COREEVT_SETSTATUS, EventData);
 }
+
+/////////////// Events processing  ////////////////////
 
 bool tessaRoster::ProcessEvent(wxEvent& event)
 {
@@ -151,4 +171,11 @@ bool tessaRoster::ProcessLuaEvent(wxCommandEvent& event)
             return false;
     }
     return true;
+}
+
+////////////////  Lua Event Handlers  /////////////////
+
+void tessaRoster::SvcUpdateContactStatus(wxCommandEvent& event)
+{
+    RosterList->AppendItem(RosterRootNode, wxString((*(LuaTable*)event.GetClientData())["string"].GetString().c_str(), wxConvUTF8));
 }
