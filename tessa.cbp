@@ -45,6 +45,7 @@
 			<Option weight="76" />
 		</Unit>
 		<Unit filename="src/LuaInterface.h" />
+		<Unit filename="src/TessaContact.h" />
 		<Unit filename="src/TessaCore.cpp" />
 		<Unit filename="src/TessaCore.h" />
 		<Unit filename="src/TessaGUIServices.h" />
