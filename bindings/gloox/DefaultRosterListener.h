@@ -68,7 +68,7 @@ public:
 	)  { return true; }
 	
 	virtual void handleNonrosterPresence  	(  	gloox::Stanza *   	 stanza  	 ) {}
-		
+	virtual void handleRosterError(gloox::Stanza *stanza) {}
 	
 
 };
