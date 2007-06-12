@@ -2,7 +2,7 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="src/LuaInterface.cpp" open="1" top="1" tabpos="7">
-		<Cursor position="3678" topLine="78" />
+		<Cursor position="4282" topLine="0" />
 	</File>
 	<File name="src/LuaInterface.h" open="1" top="0" tabpos="5">
 		<Cursor position="1001" topLine="0" />
@@ -17,10 +17,10 @@
 		<Cursor position="196" topLine="0" />
 	</File>
 	<File name="src/tessaApp.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="755" topLine="0" />
+		<Cursor position="551" topLine="0" />
 	</File>
 	<File name="src/tessaMain.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="4257" topLine="123" />
+		<Cursor position="801" topLine="0" />
 	</File>
 	<File name="src/tessaMain.h" open="1" top="0" tabpos="8">
 		<Cursor position="841" topLine="0" />

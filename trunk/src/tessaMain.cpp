@@ -16,6 +16,7 @@
 #endif //__BORLANDC__
 
 #include "tessaMain.h"
+#include "TessaContact.h"
 
 //helper functions
 enum wxbuildinfoformat {

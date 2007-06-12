@@ -70,9 +70,10 @@
 	<wx/statusbr.h>
 	<wx/treectrl.h>
 
-1181318281 source:/home/matthew/dev/tessa/src/tessaMain.cpp
+1181596716 source:/home/matthew/dev/tessa/src/tessaMain.cpp
 	"wx_pch.h"
 	"tessaMain.h"
+	"TessaContact.h"
 	<wx/bitmap.h>
 	<wx/font.h>
 	<wx/fontenum.h>
@@ -507,11 +508,12 @@
 1162578714 /usr/include//lua5.1/lualib.h
 	"lua.h"
 
-1181227055 source:/home/matthew/dev/tessa/src/LuaInterface.cpp
+1181595501 source:/home/matthew/dev/tessa/src/LuaInterface.cpp
 	"LuaInterface.h"
 	<lua.h>
 	<lualib.h>
 	<lauxlib.h>
+	<queue>
 
 1177288202 source:/home/guv/workspace/tessa/src/TessaCore.cpp
 	<wx/wx.h>
@@ -645,4 +647,6 @@
 1181567910 /home/matthew/dev/tessa/bindings/gloox/TessaInterface.h
 	<string>
 	<map>
+
+1181596681 /home/matthew/dev/tessa/src/TessaContact.h
 
