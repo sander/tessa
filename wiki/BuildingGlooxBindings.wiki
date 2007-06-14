@@ -6,9 +6,11 @@ Tessa uses a library called gloox to connect with the Jabber server. As well as 
 
 = Requirements =
 
-You need gloox 0.9 from http://camaya.net/glooxdownload (recommended RC1: [http://camaya.net/download/gloox-0.9-rc1.tar.bz2 here])
+You need 
+gloox 0.9 from http://camaya.net/glooxdownload (recommended RC4: [http://camaya.net/download/gloox-0.9-rc4.tar.bz2 here])
+
 You also need the bindings (which must be from the *SAME* version of gloox that you download): http://camaya.net/glooxbindings
-(Note, for now, the bindings for gloox 0.9-rc1 are here: http://camaya.net/download/glooxbindings-0.1.2-tmp.tar.bz2 )
+(Note, for now, the bindings for gloox 0.9-rc4 are here: http://camaya.net/download/glooxbindings-0.1.2-tmp.tar.bz2 )
 
 Extract both of the above to folders somewhere.
 
