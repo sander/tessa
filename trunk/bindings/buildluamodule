@@ -1,3 +1,4 @@
+#!/bin/bash
 ######################################################################
 # Script for building the gloox Lua bindings for Tessa
 #
@@ -13,7 +14,7 @@
 # 
 # gloox must already be built and installed (make, sudo make install)
 # before you run this script.
-
+#
 # It is ESSENTIAL that the version of gloox that the bindings 
 # are based on is the very same version that you make available 
 # to this script.
@@ -21,49 +22,44 @@
 # Configuration     #
 #####################
 # Path to the extracted gloox archive:
-GLOOX_SRC_DIR=/home/matthew/dev/gloox-0.9-rc1/
+GLOOX_SRC_DIR=../../gloox-0.9-rc4/
 
 # Path to extracted gloox bindings archive:
-GLOOX_BINDINGS_DIR=/home/matthew/dev/glooxbindings-0.1.2-tmp/
+GLOOX_BINDINGS_DIR=../../glooxbindings-0.1.2-tmp/
 
 # Other requirements # # # # # # # # # # # # # # # # # # # # # # # #
 
 LUA_INCLUDE_DIR=/usr/include/lua5.1/
+SYS_LIB_PATH=/usr/local/lib
 
 ####################################################################
+# Initialisation
+GLOOX_SRC_SUBDIR=${GLOOX_SRC_DIR%"/"}"/src"
+GLOOX_BINDINGS_SUBDIR=${GLOOX_BINDINGS_DIR%"/"}"/src"
+#####################################
 
-#echo -e '\E[1;31m'"\033[1;47mBuilding gloox...\033[0m"
-#make
-#echo -e '\E[1;31m'"\033[1;47mInstalling gloox...\033[0m"
-#sudo make install
+echo -e '\E[1;31m'"\033[1;47mConfiguring gloox...\033[0m"
+pushd $GLOOX_SRC_DIR
+if ! test -e config.h
+then ./configure
+fi
 
-#echo -e '\E[1;31m'"\033[1;47mInstalling Tessa' binding modifications...\033[0m"
-#sudo cp gloox/*.i ${GLOOX_BINDINGS_DIR%"/"}"/src/"
+cp config.h src/
+popd
 
-#echo -e '\E[1;31m'"\033[1;47mSwitching to bindings...\033[0m"
-#pushd ${GLOOX_BINDINGS_DIR%"/"}"/src/"
+rm gloox/gloox
+ln -s $GLOOX_SRC_SUBDIR gloox/gloox
 
 echo -e '\E[1;31m'"\033[1;47mGenerating binding code...\033[0m"
-#swig -lua -I/usr/local/include -ignoremissing -c++ gloox.i -o ${GLOOX_SRC_DIR%"/"}"src/gloox_wrap.cxx"
-swig -lua -Wall `gloox-config --cxxflags` -ignoremissing -c++ -I${GLOOX_BINDINGS_DIR%"/"}"/src/" -o gloox_wrap.cxx gloox/tessa.i
-
-#echo -e '\E[1;31m'"\033[1;47mInstalling into gloox...\033[0m"
-#cp gloox_wrap.cxx ../../gloox-0.9-rc1/src/
-
-#echo -e '\E[1;31m'"\033[1;47mSwitching to gloox...\033[0m"
-#popd
+swig -lua -Wall -ignoremissing -c++ -I$GLOOX_BINDINGS_SUBDIR -I$GLOOX_SRC_SUBDIR -Igloox -o gloox_wrap.cxx gloox/tessa.i
 
 echo -e '\E[1;31m'"\033[1;47mCompiling code...\033[0m"
-g++ -fpic -c ${GLOOX_SRC_DIR%"/"}/src/*.cpp gloox_wrap.cxx -I${LUA_INCLUDE_DIR} -Igloox -I${GLOOX_SRC_DIR%"/"}/src # `gloox-config --cxxflags`
+g++ -fpic -c $GLOOX_SRC_SUBDIR/*.cpp gloox_wrap.cxx -I${LUA_INCLUDE_DIR} -Igloox -I$GLOOX_SRC_SUBDIR
 
 echo -e '\E[1;31m'"\033[1;47mBuilding Lua module...\033[0m"
-g++ -shared *.o `gloox-config --libs` -o gloox.so
-
-#echo -e '\E[1;31m'"\033[1;47mInstalling Lua module...\033[0m"
-#sudo -p "Enter password to install gloox bindings:" mkdir -p /usr/local/lib/lua/5.1/; sudo cp gloox.so /usr/local/lib/lua/5.1/gloox.so
-
+g++ -shared *.o  -L$SYS_LIB_PATH -lresolv -lresolv -lgnutls -lz -o gloox.so
 
 echo -e '\E[1;31m'"\033[1;47mDone\033[0m"
 
 echo -e '\E[1;31m'"\033[1;47mYou must now install gloox.so to the Tessa folder, or your Lua path\033[0m"
-which lua >/dev/null && echo "Your Lua path is:" $(lua -e "print(package.cpath)") || echo "(usually /usr/local/lib/lua/5.1/)"
+which lua5.1 >/dev/null && echo "Your Lua path is:" $(lua -e "print(package.cpath)") || echo "(usually /usr/local/lib/lua/5.1/)"

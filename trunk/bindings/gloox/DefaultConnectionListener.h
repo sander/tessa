@@ -1,6 +1,6 @@
 
-#include <gloox/gloox.h>
-#include <gloox/connectionlistener.h>
+#include "gloox.h"
+#include "connectionlistener.h"
 
 #include <map>
 
