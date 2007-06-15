@@ -1,7 +1,7 @@
 
-#include <gloox/gloox.h>
-#include <gloox/rosterlistener.h>
-#include <gloox/rostermanager.h>
+#include "gloox.h"
+#include "rosterlistener.h"
+#include "rostermanager.h"
 
 #include <map>
 #include <string>
