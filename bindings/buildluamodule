@@ -25,7 +25,7 @@
 GLOOX_SRC_DIR=../../gloox-0.9-rc4/
 
 # Path to extracted gloox bindings archive:
-GLOOX_BINDINGS_DIR=../../glooxbindings-0.1.2-tmp/
+GLOOX_BINDINGS_DIR=../../glooxbindings-0.1.3/
 
 # Other requirements # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -47,8 +47,8 @@ fi
 cp config.h src/
 popd
 
-rm gloox/gloox
-ln -s $GLOOX_SRC_SUBDIR gloox/gloox
+rm gloox/gloox > /dev/null
+ln -s ../$GLOOX_SRC_SUBDIR gloox/gloox
 
 echo -e '\E[1;31m'"\033[1;47mGenerating binding code...\033[0m"
 swig -lua -Wall -ignoremissing -c++ -I$GLOOX_BINDINGS_SUBDIR -I$GLOOX_SRC_SUBDIR -Igloox -o gloox_wrap.cxx gloox/tessa.i
