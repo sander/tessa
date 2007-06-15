@@ -49,6 +49,7 @@
 		<Unit filename="src/TessaCore.cpp" />
 		<Unit filename="src/TessaCore.h" />
 		<Unit filename="src/TessaGUIServices.h" />
+		<Unit filename="src/TessaSRMM.cpp" />
 		<Unit filename="src/tessaApp.cpp" />
 		<Unit filename="src/tessaApp.h" />
 		<Unit filename="src/tessaMain.cpp" />
