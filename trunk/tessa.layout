@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="src/LuaInterface.cpp" open="1" top="1" tabpos="7">
+	<File name="src/LuaInterface.cpp" open="1" top="0" tabpos="7">
 		<Cursor position="4282" topLine="0" />
 	</File>
 	<File name="src/LuaInterface.h" open="1" top="0" tabpos="5">
@@ -15,6 +15,9 @@
 	</File>
 	<File name="src/TessaGUIServices.h" open="1" top="0" tabpos="6">
 		<Cursor position="196" topLine="0" />
+	</File>
+	<File name="src/TessaSRMM.cpp" open="1" top="1" tabpos="9">
+		<Cursor position="234" topLine="0" />
 	</File>
 	<File name="src/tessaApp.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="551" topLine="0" />
