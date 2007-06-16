@@ -17,7 +17,7 @@ private:
 	FireLuaEventFunction luaCall;
 
 public:
-	DefaultRosterListener(int FLE) : luaCall((FireLuaEventFunction)FLE) { printf("Roster listener created (%p)\n", FLE); }
+	DefaultRosterListener(long FLE) : luaCall((FireLuaEventFunction)FLE) { printf("Roster listener created (%p)\n", FLE); }
 
 	virtual void handleRoster(const gloox::Roster& rost)
 	{
