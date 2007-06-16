@@ -18,7 +18,7 @@ private:
 	FireLuaEventFunction luaCall;
 
 public:
-	DefaultConnectionListener(int FLE) : luaCall((FireLuaEventFunction)FLE) { printf("Listener created (%p)\n", FLE); };
+	DefaultConnectionListener(long FLE) : luaCall((FireLuaEventFunction)FLE) { printf("Listener created (%p)\n", FLE); };
 
 	virtual void onConnect()
 

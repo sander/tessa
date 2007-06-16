@@ -150,7 +150,7 @@ int LuaInterface::RunScript(char* fn)
     lua_pushlightuserdata(L, this);
     lua_pushcclosure(L, lcPostEvent, 1);
     lua_setglobal(L, "GUI_PostEvent");
-    lua_pushnumber(L, (int)FireLuaEvent);
+    lua_pushnumber(L, (long)FireLuaEvent);
     lua_setglobal(L, "FireLuaEvent");
 
     lua_register(L, "GUI_GetEvent", lcGetGUIEvent);
