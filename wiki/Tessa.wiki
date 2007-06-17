@@ -21,7 +21,7 @@ Tessa will be able to support multiple network plugins. However the first, and m
 == GUI ==
 The GUI is the hardest part of this application. It has the need to be both cross-platform and flexible. Building Tessa in a way that it relies on a specific GUI API would violate goal #1 of the project.
 
-The first GUI will be developed in wxWidgets, with the chance to develop more as Tessa grows. (If you would like a different interface for Tessa, and think you could do it, [http://groups.google.co.uk/group/tessa-dev email us] or find us in the Tessa Jabber conference] at tessa@conference.jaim.at).
+The first GUI will be developed in wxWidgets, with the chance to develop more as Tessa grows. (If you would like a different interface for Tessa, and think you could do it, [http://groups.google.co.uk/group/tessa-dev email us] or find us in the Tessa Jabber conference at tessa@conference.jaim.at).
 
 
 == Plugins ==
@@ -43,4 +43,4 @@ Plugins may be either binary or Lua. Binary plugins must be valid Lua modules. _
 For more info on how plugins will integrate with Tessa's core, see [Plugins].
 == Feedback ==
 
-Discussion of this document can take place in [http://mattj.pbwiki.com/tessafeedback Feedback on Tessa IM]
+Discussion of this document can take place in [http://obsidianlake.com/wiki/doku.php?id=tessafeedback Feedback on Tessa IM]
