@@ -1,0 +1,18 @@
+#summary Instructions for MS Windows users
+#labels Phase-Deploy,Featured
+
+= Introduction =
+
+While an easy way of building Tessa on Windows is being worked on, ready-made builds of Tessa will periodically be released. This page gives some basic information on how to use these builds.
+
+= Details =
+
+Windows builds will be available from [http://code.google.com/p/tessa/downloads/list here]
+
+After downloading:
+ # Unzip the contents of the archive into a folder.
+ # Open the 'scripts' folder.
+ # Open config.dat
+ # Enter your login details, and save.
+ # Run Tessa.exe
+
