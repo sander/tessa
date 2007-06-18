@@ -7,7 +7,7 @@ While an easy way of building Tessa on Windows is being worked on, ready-made bu
 
 = Details =
 
-Windows builds will be available from [http://code.google.com/p/tessa/downloads/list here]
+Windows builds will be available from [http://code.google.com/p/tessa/downloads/list?q=label:OpSys-Windows here]
 
 After downloading:
  # Unzip the contents of the archive into a folder.
@@ -15,4 +15,3 @@ After downloading:
  # Open config.dat
  # Enter your login details, and save.
  # Run Tessa.exe
-
