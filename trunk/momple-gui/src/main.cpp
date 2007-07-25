@@ -25,6 +25,7 @@
 
 ConnectionManager *cm;
 MainWindow *mw;
+LuaThread *lt;
 
 int main(int argc, char **argv) {
   QApplication app(argc, argv);

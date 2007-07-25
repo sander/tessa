@@ -27,6 +27,8 @@ ConnectionManager::ConnectionManager(QObject *parent) : QObject(parent) {
   waitingForPassword = false;
   gotContactList = false;
 
+  lt = new LuaThread;
+
   /*client = new XMPP::Client(this);
   client->setClientName("Momple");
   client->setClientVersion("0.1-dev");
@@ -55,12 +57,12 @@ ConnectionManager::~ConnectionManager() {
   qDebug() << "Killing the connection manager.";
 }
 
-void ConnectionManager::connectToServer(QString jidText) {
+void ConnectionManager::connectToServer(QString/* jidText*/) {
   /*XMPP::Jid jid = XMPP::Jid(jidText);
   client->connectToServer(stream, jid);*/
 }
 
-void ConnectionManager::setPassword(QString passwordText) {
+void ConnectionManager::setPassword(QString/* passwordText*/) {
   /*password = passwordText;
   if (waitingForPassword)
     authenticate();*/
@@ -84,11 +86,11 @@ void ConnectionManager::authenticate() {
   stream->continueAfterParams();*/
 }
 
-void ConnectionManager::cs_error(int errorCode) {
+void ConnectionManager::cs_error(int/* errorCode*/) {
   //qDebug() << "error" << errorCode;
 }
 
-void ConnectionManager::cs_warning(int warningCode) {
+void ConnectionManager::cs_warning(int/* warningCode*/) {
   /*if (warningCode == XMPP::ClientStream::WarnNoTLS)
     stream->continueAfterWarning();
   else
@@ -145,7 +147,7 @@ void ConnectionManager::checkContactVCard_finished() {
     //qDebug() << j->vcard().nickName();*/
 }
 
-void ConnectionManager::client_rosterRequestFinished(bool success, int,
+void ConnectionManager::client_rosterRequestFinished(bool /*success*/, int,
                                                      const QString &) {
   /*if (success) {
     XMPP::JT_VCard *task;
