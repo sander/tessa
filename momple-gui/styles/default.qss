@@ -1,0 +1,53 @@
+MainWindow {
+  background: #acacac;
+  color: black;
+  font-size: 12px;
+}
+
+#accountFrame {
+  border-width: 0 0 10 0;
+  border-image: url(:/images/account-bar-background.svg)
+                0 0 10 0 stretch stretch;
+  padding: 6px 6px 1px 6px;
+}
+
+#errorLabel {
+  color: #d40000;
+  font-weight: bold;
+}
+#fieldEdit {
+  border: 1px solid #6a76cd;
+  background: white;
+  color: black;
+  font-size: 15px;
+}
+#helpLabel {
+  color: #1a479f;
+  font-size: 10px;
+  font-style: italic;
+}
+#signingInLabel {
+  font-size: 13px;
+  color: #1a479f;
+}
+
+StatusWidget #nameLabel {
+  /*font-weight: bold;*/
+}
+StatusWidget #statusLabel {
+  font-size: 11px;
+}
+
+#contactArea {
+  background: white;
+  border: 1px solid #666;
+  margin: 3px 6px 6px 6px;
+  color: black;
+}
+ContactWidget {
+  border-bottom: 1px solid #ccc;
+  padding: 3px;
+}
+ContactWidget:hover {
+  background: #e7f1f9;
+}
