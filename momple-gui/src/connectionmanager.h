@@ -21,6 +21,7 @@
 #define CONNECTIONMANAGER_H
 
 #include "contact.h"
+#include "luathread.h"
 
 #include <QList>
 #include <QObject>
@@ -48,6 +49,7 @@ class ConnectionManager : public QObject {
     void signedIn();
 
   private:
+    LuaThread *lt;
     void authenticate();
     /*XMPP::ClientStream *stream;
     XMPP::QCATLSHandler *tlsHandler;
