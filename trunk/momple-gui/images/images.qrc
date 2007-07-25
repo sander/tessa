@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix='images/'>
+    <file>account-bar-background.svg</file>
+  </qresource>
+</RCC>
