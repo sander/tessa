@@ -27,8 +27,6 @@ ConnectionManager::ConnectionManager(QObject *parent) : QObject(parent) {
   waitingForPassword = false;
   gotContactList = false;
 
-  tct->runCoreScripts();
-
   /*client = new XMPP::Client(this);
   client->setClientName("Momple");
   client->setClientVersion("0.1-dev");

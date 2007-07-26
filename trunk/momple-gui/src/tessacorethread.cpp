@@ -9,10 +9,7 @@ void TessaCoreThread::PostEvent(int eventId, LuaTable *data) {
 }
 
 void TessaCoreThread::run() {
-  setPriority(QThread::HighestPriority);
-  exec();
-}
-
-void TessaCoreThread::runCoreScripts() {
+  //setPriority(QThread::HighestPriority);
   RunScript("scripts/core.lua");
+  exec();
 }
