@@ -11,7 +11,6 @@ class TessaCoreThread : public QThread, public LuaInterface {
   public:
     void PostEvent(int eventId, LuaTable *data);
     void run();
-    void runCoreScripts();
 };
 
 #endif

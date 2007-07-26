@@ -21,7 +21,6 @@
 #define CONNECTIONMANAGER_H
 
 #include "contact.h"
-#include "tessacorethread.h"
 
 #include <QList>
 #include <QObject>
@@ -29,8 +28,6 @@
 #include <QString>
 
 class Contact;
-
-extern TessaCoreThread *tct;
 
 class ConnectionManager : public QObject {
   Q_OBJECT
