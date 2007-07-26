@@ -21,7 +21,7 @@
 #define CONNECTIONMANAGER_H
 
 #include "contact.h"
-#include "luathread.h"
+#include "tessacorethread.h"
 
 #include <QList>
 #include <QObject>
@@ -29,6 +29,8 @@
 #include <QString>
 
 class Contact;
+
+extern TessaCoreThread *tct;
 
 class ConnectionManager : public QObject {
   Q_OBJECT
@@ -49,7 +51,6 @@ class ConnectionManager : public QObject {
     void signedIn();
 
   private:
-    LuaThread *lt;
     void authenticate();
     /*XMPP::ClientStream *stream;
     XMPP::QCATLSHandler *tlsHandler;

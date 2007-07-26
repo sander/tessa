@@ -19,13 +19,14 @@
 
 #include "connectionmanager.h"
 #include "mainwindow.h"
+#include "tessacorethread.h"
 
 #include <QApplication>
 #include <QFile>
 
 ConnectionManager *cm;
 MainWindow *mw;
-LuaThread *lt;
+TessaCoreThread *tct;
 
 int main(int argc, char **argv) {
   QApplication app(argc, argv);
@@ -34,6 +35,9 @@ int main(int argc, char **argv) {
   file.open(QFile::ReadOnly);
   QString styleSheet = QString(file.readAll());
   qApp->setStyleSheet(styleSheet);
+
+  tct = new TessaCoreThread;
+  tct->start();
 
   cm = new ConnectionManager;
   mw = new MainWindow;
