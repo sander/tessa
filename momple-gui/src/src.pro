@@ -13,7 +13,9 @@ HEADERS += connectionmanager.h \
            statuswidget.h \
            contact.h \
            contactwidget.h \
-           luathread.h
+           LuaInterface.h \
+           TessaGUIServices.h \
+           tessacorethread.h
 SOURCES += connectionmanager.cpp \
            main.cpp \
            mainwindow.cpp \
@@ -21,7 +23,8 @@ SOURCES += connectionmanager.cpp \
            statuswidget.cpp \
            contact.cpp \
            contactwidget.cpp \
-           luathread.cpp
+           LuaInterface.cpp \
+           tessacorethread.cpp
 RESOURCES += $$PWD/../icons/icons.qrc \
              $$PWD/../images/images.qrc \
              $$PWD/../styles/styles.qrc
