@@ -20,7 +20,8 @@
 #include "contact.h"
 
 Contact::Contact(QObject *parent, QString setIdentifier, QString name)
-         : QObject(parent) {
-  _identifier = setIdentifier;
-  _name = name;
+         : QObject(parent)
+{
+	_identifier = setIdentifier;
+	_name = name;
 }

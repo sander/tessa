@@ -6,12 +6,12 @@ dofile('scripts/utils.lua')
 core = {}
 
 function core:run()
-  events:fire('Core', 'Started')
-  events:fire('Session', 'StatusChange', {status = 'available', msg = ''})
-  while 1 do
-    events:fire('Core', 'Run')
-    sleep(10)
-  end
+	events:fire('Core', 'Started')
+	events:fire('Session', 'StatusChange', {status = 'available', msg = ''})
+	while 1 do
+		events:fire('Core', 'Run')
+		sleep(10)
+	end
 end
 
 core:run()

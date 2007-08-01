@@ -23,31 +23,28 @@
 #include <QVBoxLayout>
 
 ContactWidget::ContactWidget(QWidget *parent, Contact *contact)
-               : QFrame(parent) {
-  _contact = contact;
+               : QFrame(parent)
+{
+	_contact = contact;
 
-  setFrameStyle(QFrame::NoFrame | QFrame::Plain);
-  setCursor(Qt::PointingHandCursor);
+	setFrameStyle(QFrame::NoFrame | QFrame::Plain);
+	setCursor(Qt::PointingHandCursor);
 
-  QVBoxLayout *mainLayout = new QVBoxLayout;
-  mainLayout->setMargin(0);
-  mainLayout->setSpacing(0);
-  setLayout(mainLayout);
+	QVBoxLayout *mainLayout = new QVBoxLayout;
+	mainLayout->setMargin(0);
+	mainLayout->setSpacing(0);
+	setLayout(mainLayout);
 
-  QWidget *statusWidget = new QWidget;
-  QGridLayout *statusLayout = new QGridLayout;
-  statusLayout->setMargin(0);
-  statusLayout->setSpacing(0);
-  statusWidget->setLayout(statusLayout);
-  mainLayout->addWidget(statusWidget);
+	QWidget *statusWidget = new QWidget;
+	QGridLayout *statusLayout = new QGridLayout;
+	statusLayout->setMargin(0);
+	statusLayout->setSpacing(0);
+	statusWidget->setLayout(statusLayout);
+	mainLayout->addWidget(statusWidget);
 
-  _nameLabel = new QLabel(contact->name());
-  //_nameLabel->setAlignment(Qt::ElideRight);
-  statusLayout->addWidget(_nameLabel, 0, 1, Qt::AlignLeft | Qt::AlignTop);
+	_nameLabel = new QLabel(contact->name());
+	statusLayout->addWidget(_nameLabel, 0, 1, Qt::AlignLeft | Qt::AlignTop);
 
-  _iconLabel = new QLabel("( )");
-  statusLayout->addWidget(_iconLabel, 0, 0, Qt::AlignLeft | Qt::AlignTop);
-
-  /*_statusLabel = new QLabel("Available");
-  statusLayout->addWidget(_statusLabel, 1, 1, Qt::AlignLeft | Qt::AlignTop);*/
+	_iconLabel = new QLabel("( )");
+	statusLayout->addWidget(_iconLabel, 0, 0, Qt::AlignLeft | Qt::AlignTop);
 }

@@ -20,7 +20,8 @@
 #ifndef LUATHREAD_H
 #define LUATHREAD_H
 
-extern "C" {
+extern "C"
+{
 #include "lua.h"
 #include "lualib.h"
 #include "lauxlib.h"
@@ -28,13 +29,14 @@ extern "C" {
 
 #include <QThread>
 
-class LuaThread : public QThread {
-  public:
-    void run();
-    static int putLuaToSleep(lua_State *lL);
+class LuaThread : public QThread
+{
+	public:
+		void run();
+		static int putLuaToSleep(lua_State *lL);
 
-  private:
-    lua_State* L;
+	private:
+		lua_State* L;
 };
 
 extern LuaThread *lt;

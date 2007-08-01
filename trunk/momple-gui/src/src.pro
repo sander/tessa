@@ -27,5 +27,5 @@ SOURCES += connectionmanager.cpp \
 RESOURCES += $$PWD/../icons/icons.qrc
 
 unix:!mac {
-  QMAKE_POST_LINK = rm -f ../momple; ln -s src/momple ../momple
+	QMAKE_POST_LINK = rm -f ../momple; ln -s src/momple ../momple
 }

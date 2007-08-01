@@ -22,16 +22,12 @@
 
 #include <QLineEdit>
 
-class StatusWidget : public QLineEdit {
-  Q_OBJECT
+class StatusWidget : public QLineEdit
+{
+	Q_OBJECT
 
-  public:
-    StatusWidget(QWidget *parent=0);
-
-#if 0
-  private:
-    QLineEdit *statusEdit;
-#endif
+	public:
+		StatusWidget(QWidget *parent=0);
 };
 
 #endif

@@ -19,19 +19,8 @@
 
 #include "statuswidget.h"
 
-StatusWidget::StatusWidget(QWidget *parent) : QLineEdit(parent) {
-  setText("Available");
-  setStyleSheet("QLineEdit { background-color: transparent; border: 1px solid transparent; } QLineEdit:focus { background-color: white; border: 1px solid gray; }");
-
-#if 0
-  QHBoxLayout *mainLayout = new QHBoxLayout;
-  mainLayout->setMargin(0);
-  mainLayout->setSpacing(0);
-  setLayout(mainLayout);
-
-  statusEdit = new QLineEdit(this);
-  statusEdit->setText("Available");
-  //statusEdit->setStyleSheet("QLineEdit { background: transparent; }");
-  mainLayout->addWidget(statusEdit);
-#endif
+StatusWidget::StatusWidget(QWidget *parent) : QLineEdit(parent)
+{
+	setText("Available");
+	setStyleSheet("QLineEdit { background-color: transparent; border: 1px solid transparent; } QLineEdit:focus { background-color: white; border: 1px solid gray; }");
 }

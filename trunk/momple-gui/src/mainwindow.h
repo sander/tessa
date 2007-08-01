@@ -27,22 +27,23 @@
 
 extern ConnectionManager *cm;
 
-class MainWindow : public QWidget {
-  Q_OBJECT
+class MainWindow : public QWidget
+{
+	Q_OBJECT
 
-  public:
-    MainWindow(QWidget *parent=0);
+	public:
+		MainWindow(QWidget *parent=0);
 
-  private:
-    QVBoxLayout *mainLayout;
-    QVBoxLayout *accountFrameLayout;
-    QWidget *contactList;
+	private:
+		QVBoxLayout *mainLayout;
+		QVBoxLayout *accountFrameLayout;
+		QWidget *contactList;
 
-  protected:
-    void closeEvent(QCloseEvent *);
+	protected:
+		void closeEvent(QCloseEvent *);
 
-  private slots:
-    void cm_signedIn();
+	private slots:
+		void cm_signedIn();
 };
 
 #endif
