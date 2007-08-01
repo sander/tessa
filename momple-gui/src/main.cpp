@@ -19,7 +19,6 @@
 
 #include "connectionmanager.h"
 #include "mainwindow.h"
-//#include "tessacorethread.h"
 #include "luathread.h"
 
 #include <QApplication>
@@ -27,29 +26,19 @@
 
 ConnectionManager *cm;
 MainWindow *mw;
-//TessaCoreThread *tct;
 LuaThread *lt;
 
-int main(int argc, char **argv) {
-  QApplication app(argc, argv);
+int main(int argc, char **argv)
+{
+	QApplication app(argc, argv);
 
-#ifdef MOMPLE_STYLE
-  QFile file(":/styles/default.qss");
-  file.open(QFile::ReadOnly);
-  QString styleSheet = QString(file.readAll());
-  qApp->setStyleSheet(styleSheet);
-#endif
+	lt = new LuaThread;
+	lt->start();
 
-  //tct = new TessaCoreThread;
-  //tct->start();
+	cm = new ConnectionManager;
+	mw = new MainWindow;
+	cm->setParent(mw);
+	mw->show();
 
-  lt = new LuaThread;
-  lt->start();
-
-  cm = new ConnectionManager;
-  mw = new MainWindow;
-  cm->setParent(mw);
-  mw->show();
-
-  return app.exec();
+	return app.exec();
 }

@@ -24,28 +24,27 @@
 #include <QtCore>
 #include <QGridLayout>
 
-AccountWidget::AccountWidget(QWidget *parent) : QWidget(parent) {
-  QGridLayout *mainLayout = new QGridLayout;
-  mainLayout->setMargin(0);
-  mainLayout->setSpacing(0);
-  setLayout(mainLayout);
+AccountWidget::AccountWidget(QWidget *parent) : QWidget(parent)
+{
+	QGridLayout *mainLayout = new QGridLayout;
+	mainLayout->setMargin(0);
+	mainLayout->setSpacing(0);
+	setLayout(mainLayout);
 
-  nameLabel = new QLabel(cm->ownName());
-  nameLabel->setObjectName("nameLabel");
-  mainLayout->addWidget(nameLabel, 0, 0, Qt::AlignLeft | Qt::AlignTop);
+	nameLabel = new QLabel(cm->ownName());
+	nameLabel->setObjectName("nameLabel");
+	mainLayout->addWidget(nameLabel, 0, 0, Qt::AlignLeft | Qt::AlignTop);
 
-  /*statusLabel = new QLabel("Available");
-  statusLabel->setObjectName("statusLabel");
-  statusLabel->setForegroundRole(QPalette::Dark);
-  mainLayout->addWidget(statusLabel, 1, 0, Qt::AlignLeft | Qt::AlignTop);*/
-  statusWidget = new StatusWidget;
-  mainLayout->addWidget(statusWidget, 1, 0, Qt::AlignLeft | Qt::AlignTop);
+	statusWidget = new StatusWidget;
+	mainLayout->addWidget(statusWidget, 1, 0, Qt::AlignLeft | Qt::AlignTop);
 
-  avatarLabel = new QLabel;
-  /*QImage avatar = *cm->ownAvatar();
-  QImage scaledAvatar = avatar.scaled(32, 32, Qt::KeepAspectRatio,
-                                      Qt::SmoothTransformation);
-  avatarLabel->setPixmap(QPixmap(scaledAvatar));*/
-  mainLayout->addWidget(avatarLabel, 0, 2, 2, 1,
-                        Qt::AlignRight | Qt::AlignTop);
+	avatarLabel = new QLabel;
+#if 0
+	QImage avatar = *cm->ownAvatar();
+	QImage scaledAvatar = avatar.scaled(32, 32, Qt::KeepAspectRatio,
+	                                    Qt::SmoothTransformation);
+    avatarLabel->setPixmap(QPixmap(scaledAvatar));
+#endif
+	mainLayout->addWidget(avatarLabel, 0, 2, 2, 1,
+	                      Qt::AlignRight | Qt::AlignTop);
 }

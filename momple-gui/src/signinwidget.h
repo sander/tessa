@@ -27,27 +27,28 @@
 #include <QString>
 #include <QWidget>
 
-class SignInWidget : public QWidget {
-  Q_OBJECT
+class SignInWidget : public QWidget
+{
+	Q_OBJECT
 
-  public:
-    SignInWidget(QWidget *parent, ConnectionManager *connectionManager);
-    void setFocusToField();
+	public:
+		SignInWidget(QWidget *parent, ConnectionManager *connectionManager);
+		void setFocusToField();
 
-  private:
-    ConnectionManager *cm;
-    QLabel *errorLabel;
-    QLabel *fieldLabel;
-    QLineEdit *fieldEdit;
-    QLabel *helpLabel;
-    QLabel *signingInLabel;
-    void enterJidMode();
-    void enterPasswordMode();
-    void enterSigningInMode();
+	private:
+		ConnectionManager *cm;
+		QLabel *errorLabel;
+		QLabel *fieldLabel;
+		QLineEdit *fieldEdit;
+		QLabel *helpLabel;
+		QLabel *signingInLabel;
+		void enterJidMode();
+		void enterPasswordMode();
+		void enterSigningInMode();
 
-  private slots:
-    void goToNextMode();
-    void cm_signInError(QString errorText);
+	private slots:
+		void goToNextMode();
+		void cm_signInError(QString errorText);
 };
 
 #endif

@@ -28,16 +28,17 @@
 
 extern ConnectionManager *cm;
 
-class AccountWidget : public QWidget {
-  Q_OBJECT
+class AccountWidget : public QWidget
+{
+	Q_OBJECT
 
-  public:
-    AccountWidget(QWidget *parent=0);
+	public:
+		AccountWidget(QWidget *parent=0);
 
-  private:
-    QLabel *nameLabel;
-    StatusWidget *statusWidget;
-    QLabel *avatarLabel;
+	private:
+		QLabel *nameLabel;
+		StatusWidget *statusWidget;
+		QLabel *avatarLabel;
 };
 
 #endif

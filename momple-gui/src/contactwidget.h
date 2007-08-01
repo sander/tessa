@@ -26,17 +26,18 @@
 #include <QLabel>
 #include <QWidget>
 
-class ContactWidget : public QFrame {
-  Q_OBJECT
+class ContactWidget : public QFrame
+{
+	Q_OBJECT
 
-  public:
-    ContactWidget(QWidget *parent, Contact *contact);
+	public:
+		ContactWidget(QWidget *parent, Contact *contact);
 
-  private:
-    Contact *_contact;
-    QLabel *_nameLabel;
-    QLabel *_iconLabel;
-    QLabel *_statusLabel;
+	private:
+		Contact *_contact;
+		QLabel *_nameLabel;
+		QLabel *_iconLabel;
+		QLabel *_statusLabel;
 };
 
 #endif

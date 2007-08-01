@@ -1,6 +1,6 @@
 /*
  * signinwidget.cpp is a part of the Momple frontend to Tessa.
- * Copyright (C) 2007  Sander Dijkhuis
+ * Copyright (C) 2007	Sander Dijkhuis
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,100 +22,108 @@
 #include <QVBoxLayout>
 
 SignInWidget::SignInWidget(QWidget *parent,
-                           ConnectionManager *connectionManager)
-  : QWidget(parent) {
-  cm = connectionManager;
+	                         ConnectionManager *connectionManager)
+	: QWidget(parent)
+{
+	cm = connectionManager;
 
-  QVBoxLayout *mainLayout = new QVBoxLayout;
-  mainLayout->setMargin(0);
-  mainLayout->setSpacing(3);
-  setLayout(mainLayout);
+	QVBoxLayout *mainLayout = new QVBoxLayout;
+	mainLayout->setMargin(0);
+	mainLayout->setSpacing(3);
+	setLayout(mainLayout);
 
-  errorLabel = new QLabel;
-  errorLabel->setObjectName("errorLabel");
-  errorLabel->setWordWrap(true);
-  errorLabel->setAlignment(Qt::AlignTop | Qt::AlignHCenter);
-  errorLabel->hide();
-  mainLayout->addWidget(errorLabel);
+	errorLabel = new QLabel;
+	errorLabel->setObjectName("errorLabel");
+	errorLabel->setWordWrap(true);
+	errorLabel->setAlignment(Qt::AlignTop | Qt::AlignHCenter);
+	errorLabel->hide();
+	mainLayout->addWidget(errorLabel);
 
-  fieldLabel = new QLabel;
-  fieldLabel->hide();
-  mainLayout->addWidget(fieldLabel);
+	fieldLabel = new QLabel;
+	fieldLabel->hide();
+	mainLayout->addWidget(fieldLabel);
 
-  fieldEdit = new QLineEdit;
-  fieldEdit->setObjectName("fieldEdit");
-  fieldEdit->hide();
-  fieldLabel->setBuddy(fieldEdit);
-  mainLayout->addWidget(fieldEdit);
+	fieldEdit = new QLineEdit;
+	fieldEdit->setObjectName("fieldEdit");
+	fieldEdit->hide();
+	fieldLabel->setBuddy(fieldEdit);
+	mainLayout->addWidget(fieldEdit);
 
-  helpLabel = new QLabel;
-  helpLabel->setObjectName("helpLabel");
-  helpLabel->setAlignment(Qt::AlignTop | Qt::AlignRight);
-  helpLabel->hide();
-  mainLayout->addWidget(helpLabel);
+	helpLabel = new QLabel;
+	helpLabel->setObjectName("helpLabel");
+	helpLabel->setAlignment(Qt::AlignTop | Qt::AlignRight);
+	helpLabel->hide();
+	mainLayout->addWidget(helpLabel);
 
-  signingInLabel = new QLabel(tr("Signing in..."));
-  signingInLabel->setObjectName("signingInLabel");
-  signingInLabel->setAlignment(Qt::AlignTop | Qt::AlignHCenter);
-  mainLayout->addWidget(signingInLabel);
+	signingInLabel = new QLabel(tr("Signing in..."));
+	signingInLabel->setObjectName("signingInLabel");
+	signingInLabel->setAlignment(Qt::AlignTop | Qt::AlignHCenter);
+	mainLayout->addWidget(signingInLabel);
 
-  connect(fieldEdit, SIGNAL(returnPressed()), SLOT(goToNextMode()));
-  connect(cm, SIGNAL(signInError(QString)), SLOT(cm_signInError(QString)));
-
-  //enterJidMode();
+	connect(fieldEdit, SIGNAL(returnPressed()), SLOT(goToNextMode()));
+	connect(cm, SIGNAL(signInError(QString)), SLOT(cm_signInError(QString)));
 }
 
-void SignInWidget::setFocusToField() {
-  fieldEdit->setFocus();
+void SignInWidget::setFocusToField()
+{
+	fieldEdit->setFocus();
 }
 
-void SignInWidget::enterJidMode() {
-  fieldLabel->setText(tr("Your ID:"));
-  fieldLabel->show();
+void SignInWidget::enterJidMode()
+{
+	fieldLabel->setText(tr("Your ID:"));
+	fieldLabel->show();
 
-  fieldEdit->setText("");
-  fieldEdit->setEchoMode(QLineEdit::Normal);
-  fieldEdit->show();
+	fieldEdit->setText("");
+	fieldEdit->setEchoMode(QLineEdit::Normal);
+	fieldEdit->show();
 
-  helpLabel->setText(tr("Example: user@gmail.com"));
-  helpLabel->show();
+	helpLabel->setText(tr("Example: user@gmail.com"));
+	helpLabel->show();
 
-  signingInLabel->hide();
+	signingInLabel->hide();
 }
 
-void SignInWidget::enterPasswordMode() {
-  errorLabel->hide();
+void SignInWidget::enterPasswordMode()
+{
+	errorLabel->hide();
 
-  fieldLabel->setText(tr("Password:"));
+	fieldLabel->setText(tr("Password:"));
 
-  fieldEdit->setText("");
-  fieldEdit->setEchoMode(QLineEdit::Password);
+	fieldEdit->setText("");
+	fieldEdit->setEchoMode(QLineEdit::Password);
 
-  helpLabel->hide();
+	helpLabel->hide();
 
-  setFocusToField();
+	setFocusToField();
 }
 
-void SignInWidget::enterSigningInMode() {
-  fieldLabel->hide();
-  fieldEdit->hide();
-  signingInLabel->show();
+void SignInWidget::enterSigningInMode()
+{
+	fieldLabel->hide();
+	fieldEdit->hide();
+	signingInLabel->show();
 }
 
-void SignInWidget::goToNextMode() {
-  errorLabel->hide();
+void SignInWidget::goToNextMode()
+{
+	errorLabel->hide();
 
-  if (fieldEdit->echoMode() == QLineEdit::Normal) {
-    cm->connectToServer(fieldEdit->text());
-    enterPasswordMode();
-  } else {
-    enterSigningInMode();
-    cm->setPassword(fieldEdit->text());
-  }
+	if (fieldEdit->echoMode() == QLineEdit::Normal)
+	{
+	  cm->connectToServer(fieldEdit->text());
+	  enterPasswordMode();
+	}
+	else
+	{
+	  enterSigningInMode();
+	  cm->setPassword(fieldEdit->text());
+	}
 }
 
-void SignInWidget::cm_signInError(QString errorText) {
-  errorLabel->setText(errorText);
-  errorLabel->show();
-  enterJidMode();
+void SignInWidget::cm_signInError(QString errorText)
+{
+	errorLabel->setText(errorText);
+	errorLabel->show();
+	enterJidMode();
 }

@@ -21,22 +21,25 @@
 
 #include <QtCore>
 
-int LuaThread::putLuaToSleep(lua_State *lL) {
-  unsigned long msecs = (unsigned long) lua_tonumber(lL, 1);
-  lt->msleep(msecs);
-  return 0;
+int LuaThread::putLuaToSleep(lua_State *lL)
+{
+	unsigned long msecs = (unsigned long) lua_tonumber(lL, 1);
+	lt->msleep(msecs);
+	return 0;
 }
 
-void LuaThread::run() {
-  L = luaL_newstate();
-  luaL_openlibs(L);
+void LuaThread::run()
+{
+	L = luaL_newstate();
+	luaL_openlibs(L);
 
-  lua_register(L, "sleep", putLuaToSleep);
+	lua_register(L, "sleep", putLuaToSleep);
 
-  if(luaL_dofile(L, "scripts/core.lua")) {
-    qDebug() << "Unrecoverable error in Tessa core script!";
-    qDebug() << "  Error:" << lua_tostring(L, -1);
-  }
+	if(luaL_dofile(L, "scripts/core.lua"))
+	{
+		qDebug() << "Unrecoverable error in Tessa core script!";
+		qDebug() << "  Error:" << lua_tostring(L, -1);
+	}
 
-  exec();
+	exec();
 }

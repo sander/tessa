@@ -23,17 +23,18 @@
 #include <QObject>
 #include <QString>
 
-class Contact : public QObject {
-  Q_OBJECT
+class Contact : public QObject
+{
+	Q_OBJECT
 
-  public:
-    Contact(QObject *parent, QString identifier, QString name);
-    QString identifier() { return _identifier; };
-    QString name() { return _name; };
+	public:
+		Contact(QObject *parent, QString identifier, QString name);
+		QString identifier() { return _identifier; };
+		QString name() { return _name; };
 
-  private:
-    QString _identifier;
-    QString _name;
+	private:
+		QString _identifier;
+		QString _name;
 };
 
 #endif
