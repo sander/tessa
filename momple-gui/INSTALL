@@ -1,0 +1,8 @@
+                      HOW TO INSTALL THIS TESSA FRONTEND
+
+ 1. Build the gloox bindings. See this page for instructions:
+    <http://code.google.com/p/tessa/wiki/BuildingGlooxBindings>
+ 2. Put the gloox.so file in this directory.
+ 3. Enter this directory.
+ 4. ./configure && make
+ 5. Run momple from this directory, not from src/.
