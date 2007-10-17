@@ -38,6 +38,9 @@ bool tessaApp::OnInit()
 	    // Now, initialise Lua thread
 	    CoreThread = new TessaCoreThread(RosterWindow, wxID_CORETHREAD);
 
+
+	    SRMMSystem.NewConversation(_T("Mr. Contact"), _T("Default"));
+
 	}
 	//*)
 	return wxsOK;

@@ -1,56 +1,47 @@
-/*
-static std::map<std::string, TessaSRMM> MessageSessions;
+#include "TessaSRMM.h"
 
-class TessaMessageSessionInterface
+
+BEGIN_EVENT_TABLE(TessaConversation, wxWindow)
+  EVT_SIZE    (           TessaConversation::OnSize)
+END_EVENT_TABLE()
+
+
+TessaConversation::TessaConversation(wxWindow *parent, wxWindowID id)
 {
-    TessaMessageSession(const std::string& Contact, TessaSRMM* HostContainer)
-    {
-        if(HostContainer)
-        {
-            // Create new session inside that container
-        }
-        else
-        {
-            // Create a new container
-        }
-    }
-    ~TessaMessageSession()
-    {
-        // Remove ourselves from container
-    }
+    // Create frame window
+    wxWindow::Create((wxWindow*)parent,id, wxDefaultPosition, parent->GetClientSize(),wxDEFAULT_FRAME_STYLE,_T("Conversation"));
 
-    private:
-    std::string m_ContactJID;
-    TessaSRMM* m_Container;
+    // Create splitter
+    m_Splitter.Create(this, -1, wxPoint(0,0), GetClientSize(), wxSP_3D, _T("ConversationSplit"));
+
+
+    m_Splitter.Show();
+
+
+
+    // Create sub-windows
+    m_MessageLog.Create(&m_Splitter, -1, _T("Messages"), wxPoint(0,0), wxSize(GetClientSize().x, 100), wxTE_MULTILINE);
+    m_InputArea.Create(&m_Splitter, -1, _T("Hello!"), wxPoint(0,0), wxSize(GetClientSize().x, 100), wxTE_MULTILINE);
+
+    m_Splitter.SplitHorizontally(&m_MessageLog, &m_InputArea, -100);
+
+    m_Splitter.Show();
+
 }
 
-class TessaSRMMContainer : public wxFrame
+void TessaConversation::OnSize(wxSizeEvent& evt)
 {
-    TessaSRMM();
-    ~TessaSRMM();
-
-    private:
-    wxString m_ContactJID;
-    bool m_IsTabbed;
-
-    // Child
-
-};
-
-class TessaMessageInterface
-{
-    private:
-    TessaSRMMContainer* m_ParentContainer;
-
-
-    wxSplitter m_Splitter;
-    wxWindow m_MessageLog;
-    wxWindow m_InputArea;
+    m_Splitter.SetSize(evt.GetSize());
 }
 
-void TessaSRMM::TessaSRMM(wxWindow *parent, wxWindowId id)
-{
-    Create(parent,id,_T("Messages"),wxDefaultPosition,wxSize(450, 400),wxDEFAULT_FRAME_STYLE,_T("wxFrame"));
 
+int TessaSRMMSystem::NewConversation(wxString Contact, wxString PreferredContainer)
+{
+    TessaContainer* cont = new TessaContainer(Contact);
+    TessaConversation* conv = new TessaConversation(cont, -1);
+    cont->Show();
+    conv->Show();
+    Conversations[Contact] = conv;
+    Containers[PreferredContainer] = cont;
+    return 0;
 }
- */
