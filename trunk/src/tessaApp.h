@@ -21,11 +21,13 @@
 #endif
 
 #include "TessaCore.h"
+#include "TessaSRMM.h"
 
 class tessaApp : public wxApp
 {
     private:
         TessaCoreThread* CoreThread;
+        TessaSRMMSystem SRMMSystem;
 	public:
 		virtual bool OnInit();
 };
