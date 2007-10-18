@@ -49,14 +49,7 @@ class TessaSRMMSystem
     std::map<wxString, TessaContainer*> Containers;
     std::map<wxString, TessaConversation*> Conversations;
 
-    bool m_GlobalTabs;
-
     public:
-    bool SetTabs(bool fEnableTabs)
-    {
-        return m_GlobalTabs = fEnableTabs;
-    }
-
     int NewConversation(wxString Contact, wxString PreferredContainer);
     int AddMessageToConversation(wxString Contact, wxString Message, bool ShowNick = true);
     int SetConversationContainer(wxString Contact);
