@@ -42,3 +42,5 @@ In the latter case we will need to have a numeric ID for each event. I am very m
 
 ==Services==
 It is clear to me that we do need something separate to events. However it could still use the events system. Imagine the event "`Services/MessageWindow/AddIcon`", ack'ed with "`Events/MessageWindow/IconAdded`", etc.
+
+In this system, services are simply events beginning with "`Services/`".
