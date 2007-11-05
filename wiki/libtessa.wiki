@@ -11,7 +11,7 @@ libtessa provides several interfaces for performing different functions.
 ==Core loader==
 This part deals with the execution of the core script(s). It is highly recommended to run this in a seperate thread.
 
-==FireLuaEvent Interface==
+==`FireLuaEvent` Interface==
 Due to current issues with the way our gloox bindings are produced, it needs this interface to hand over events to the core. The GUI should not use this, and it must only be called from the same thread as the core.
 
 In the future this interface may be removed.
@@ -38,7 +38,7 @@ In the latter case we will need to have a numeric ID for each event. I am very m
 
 
 `TriggerEvent(char* name, LuaTable&);`
-	TriggerEvent code is in SVN as PostLuaEvent(). It posts the event to a queue. It goes in hand with lcGetGUIEvent() which is used by Lua to retrieve events from this queue.
+	`TriggerEvent` code is in SVN as `PostLuaEvent()`. It posts the event to a queue. It goes in hand with `lcGetGUIEvent()` which is used by Lua to retrieve events from this queue.
 
 ==Services==
-It is clear to me that we do need something separate to events. However it could still use the events system. Imagine the event "Services/MessageWindow/AddIcon", ack'ed with "Events/MessageWindow/IconAdded", etc.
+It is clear to me that we do need something separate to events. However it could still use the events system. Imagine the event "`Services/MessageWindow/AddIcon`", ack'ed with "`Events/MessageWindow/IconAdded`", etc.
