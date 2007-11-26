@@ -1,5 +1,5 @@
 /*
- * mainwindow.h is a part of the Momple frontend to Tessa.
+ * footerwidget.h is a part of the Momple frontend to Tessa.
  * Copyright (C) 2007  Sander Dijkhuis
  *
  * This program is free software; you can redistribute it and/or modify
@@ -17,32 +17,24 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef FOOTERWIDGET_H 
+#define FOOTERWIDGET_H
 
-#include "footerwidget.h"
+#include <QLineEdit>
+#include <QFrame>
 
-#include <QVBoxLayout>
-#include <QWidget>
-
-class MainWindow : public QWidget
+class FooterWidget : public QFrame
 {
 	Q_OBJECT
 
 	public:
-		MainWindow(QWidget *parent=0);
+		FooterWidget(QWidget *parent = 0);
 
 	private:
-		QVBoxLayout *_mainLayout;
-		QVBoxLayout *_accountFrameLayout;
-		QWidget *_contactList;
-		FooterWidget *_footerWidget;
-
-	protected:
-		void closeEvent(QCloseEvent *);
+		QLineEdit *_actionEdit;
 
 	private slots:
-		void cm_signedIn();
+		void on_ae_returnPressed();
 };
 
 #endif

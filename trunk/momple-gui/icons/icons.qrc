@@ -1,5 +1,7 @@
 <RCC>
 	<qresource prefix='/icons/'>
 		<file>momple-16x16.png</file>
+		<file>status/available.png</file>
+		<file>status/no-avatar.png</file>
 	</qresource>
 </RCC>

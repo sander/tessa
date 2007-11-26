@@ -20,8 +20,6 @@
 #ifndef SIGNINWIDGET_H
 #define SIGNINWIDGET_H
 
-#include "connectionmanager.h"
-
 #include <QLabel>
 #include <QLineEdit>
 #include <QString>
@@ -32,11 +30,10 @@ class SignInWidget : public QWidget
 	Q_OBJECT
 
 	public:
-		SignInWidget(QWidget *parent, ConnectionManager *connectionManager);
+		SignInWidget(QWidget *parent);
 		void setFocusToField();
 
 	private:
-		ConnectionManager *cm;
 		QLabel *errorLabel;
 		QLabel *fieldLabel;
 		QLineEdit *fieldEdit;

@@ -21,12 +21,8 @@
 
 #include <QVBoxLayout>
 
-SignInWidget::SignInWidget(QWidget *parent,
-	                         ConnectionManager *connectionManager)
-	: QWidget(parent)
+SignInWidget::SignInWidget(QWidget *parent) : QWidget(parent)
 {
-	cm = connectionManager;
-
 	QVBoxLayout *mainLayout = new QVBoxLayout;
 	mainLayout->setMargin(0);
 	mainLayout->setSpacing(3);
@@ -61,7 +57,7 @@ SignInWidget::SignInWidget(QWidget *parent,
 	mainLayout->addWidget(signingInLabel);
 
 	connect(fieldEdit, SIGNAL(returnPressed()), SLOT(goToNextMode()));
-	connect(cm, SIGNAL(signInError(QString)), SLOT(cm_signInError(QString)));
+	//connect(cm, SIGNAL(signInError(QString)), SLOT(cm_signInError(QString)));
 }
 
 void SignInWidget::setFocusToField()
@@ -111,13 +107,13 @@ void SignInWidget::goToNextMode()
 
 	if (fieldEdit->echoMode() == QLineEdit::Normal)
 	{
-	  cm->connectToServer(fieldEdit->text());
+	  //cm->connectToServer(fieldEdit->text());
 	  enterPasswordMode();
 	}
 	else
 	{
 	  enterSigningInMode();
-	  cm->setPassword(fieldEdit->text());
+	  //cm->setPassword(fieldEdit->text());
 	}
 }
 

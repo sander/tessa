@@ -19,8 +19,13 @@
 
 #include "contactwidget.h"
 
+#include <QApplication>
 #include <QGridLayout>
-#include <QVBoxLayout>
+#include <QPainter>
+#include <QPixmap>
+#include <QStyleOption>
+
+#include <QtCore>
 
 ContactWidget::ContactWidget(QWidget *parent, Contact *contact)
                : QFrame(parent)
@@ -30,21 +35,79 @@ ContactWidget::ContactWidget(QWidget *parent, Contact *contact)
 	setFrameStyle(QFrame::NoFrame | QFrame::Plain);
 	setCursor(Qt::PointingHandCursor);
 
-	QVBoxLayout *mainLayout = new QVBoxLayout;
-	mainLayout->setMargin(0);
-	mainLayout->setSpacing(0);
-	setLayout(mainLayout);
+	_mainLayout = new QVBoxLayout;
+	_mainLayout->setMargin(0);
+	_mainLayout->setSpacing(0);
+	setLayout(_mainLayout);
 
 	QWidget *statusWidget = new QWidget;
 	QGridLayout *statusLayout = new QGridLayout;
 	statusLayout->setMargin(0);
 	statusLayout->setSpacing(0);
+	statusLayout->setColumnStretch(0, 1);
+	statusLayout->setColumnStretch(1, 9);
 	statusWidget->setLayout(statusLayout);
-	mainLayout->addWidget(statusWidget);
+	_mainLayout->addWidget(statusWidget);
 
 	_nameLabel = new QLabel(contact->name());
+	_nameLabel->setObjectName("nameLabel");
 	statusLayout->addWidget(_nameLabel, 0, 1, Qt::AlignLeft | Qt::AlignTop);
 
-	_iconLabel = new QLabel("( )");
+	QPixmap statusIcon;
+	statusIcon.load(":/icons/status/available.png");
+	_iconLabel = new QLabel;
+	_iconLabel->setPixmap(statusIcon);
 	statusLayout->addWidget(_iconLabel, 0, 0, Qt::AlignLeft | Qt::AlignTop);
+
+	_actionWidget = NULL;
+
+	setOpen(false);
+	setFocused(false);
+}
+
+bool ContactWidget::open() {
+	return _open;
+}
+
+void ContactWidget::setOpen(bool isOpen) {
+	_open = isOpen;
+	qApp->setStyleSheet(qApp->styleSheet());
+
+	if (isOpen) {
+		if (_actionWidget == NULL) {
+			_actionWidget = new ContactActionWidget(this, _contact);
+			_mainLayout->addWidget(_actionWidget);
+		} else {
+			if (!_actionWidget->isVisible())
+				_actionWidget->show();
+		}
+	} else {
+		if (_actionWidget != NULL) {
+			_actionWidget->hide();
+		}
+	}
+
+	setFocused(true);
+}
+
+bool ContactWidget::focused() {
+	return _focused;
+}
+
+void ContactWidget::setFocused(bool isFocused) {
+	_focused = isFocused;
+	qApp->setStyleSheet(qApp->styleSheet());
+}
+
+void ContactWidget::mouseReleaseEvent(QMouseEvent *) {
+	setOpen(!_open);
+}
+
+void ContactWidget::paintEvent(QPaintEvent *) {
+	QStyleOption option;
+	option.initFrom(this);
+	option.state = QStyle::State_Open;
+
+	QPainter painter(this);
+	//style().drawControl(QStyle::CE_Widget, &option, &painter, this);
 }

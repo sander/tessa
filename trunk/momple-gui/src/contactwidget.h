@@ -21,23 +21,41 @@
 #define CONTACTWIDGET_H
 
 #include "contact.h"
+#include "contactactionwidget.h"
 
 #include <QFrame>
 #include <QLabel>
+#include <QMouseEvent>
+#include <QVBoxLayout>
 #include <QWidget>
 
 class ContactWidget : public QFrame
 {
 	Q_OBJECT
+	Q_PROPERTY(bool open READ open WRITE setOpen)
+	Q_PROPERTY(bool focused READ focused WRITE setFocused)
 
 	public:
 		ContactWidget(QWidget *parent, Contact *contact);
 
+		bool open();
+		void setOpen(bool isOpen);
+
+		bool focused();
+		void setFocused(bool isFocused);
+
 	private:
 		Contact *_contact;
+                QVBoxLayout *_mainLayout;
 		QLabel *_nameLabel;
 		QLabel *_iconLabel;
 		QLabel *_statusLabel;
+		ContactActionWidget *_actionWidget;
+		bool _open;
+		bool _focused;
+		void mouseReleaseEvent(QMouseEvent *event);
+		void paintEvent(QPaintEvent *event);
+		void setupOpened();
 };
 
 #endif
