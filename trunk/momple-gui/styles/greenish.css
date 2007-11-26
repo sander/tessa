@@ -1,0 +1,120 @@
+* {
+	/*font: 13px 'Lucida Sans';*/
+        color: #000;
+	selection-color: #fff;
+	selection-background-color: #90b992;
+}
+
+/*
+QScrollBar, QScrollBar:vertical {
+	background: white;
+	margin: 0;
+	width: 8px;
+	padding: 0 2px;
+}
+QScrollBar::handle {
+	background: gray;
+}
+QScrollBar::add-line, QScrollBar::sub-line {
+	height: 0;
+	subcontrol-position; top;
+	subcontrol-origin: margin;
+}
+*/
+
+QScrollBar {
+	width: 0;
+	margin: 0;
+}
+
+MainWindow {
+	background: #9c9c9c;
+	background: #ffffff;
+}
+
+#accountFrame {
+	background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                    stop:0 #00d10a, stop:0.5 #30f039,
+                                    stop:1 #00d10a);
+        border: none;
+	border-bottom: 2px solid qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                                 stop:0 #0cb914,
+                                                 stop:0.5 #15d81e,
+                                                 stop:1 #0cb914);
+	padding: 4px;
+}
+#accountFrame #nameLabel {
+	font-weight: bold;
+}
+
+FooterWidget {
+	background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                    stop:0 #00d10a, stop:0.5 #30f039,
+                                    stop:1 #00d10a);
+        border: none;
+	border-top: 2px solid qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                              stop:0 #0cb914,
+                                              stop:0.5 #15d81e,
+                                               stop:1 #0cb914);
+	padding: 4px;
+}
+FooterWidget QLineEdit {
+	border: 1px solid #006805;
+	background: #fff;
+	color: #6c6c6c;
+}
+FooterWidget QLineEdit:focus {
+	color: #000;
+}
+
+StatusWidget {
+	background-color: transparent;
+	border: 1px solid transparent;
+}
+StatusWidget:focus {
+	background-color: white;
+	border: 1px solid gray;
+}
+
+#contactList {
+	background: #fff;
+}
+#contactArea {
+	border: none;
+}
+
+ContactWidget:hover {
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+	                            stop:0 #ffffff, stop:1 #d8faca);
+}
+ContactWidget[open=true][focused=true] {
+	/*background: #009c07;*/
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+	                            stop:0 #008e07,
+				    stop:1 #009c07);
+}
+ContactWidget[open=true][focused=true] QLabel {
+	color: #fff;
+}
+ContactWidget[open=true][focused=false] {
+	background: #fff;
+}
+ContactWidget[open=true] #nameLabel {
+	font-weight: bold;
+}
+
+ContactActionWidget {
+	padding: 4px;
+	border: none;
+}
+ContactActionWidget QTextEdit {
+	border: 1px solid #006805;
+	background: #fff;
+	color: #000;
+}
+ContactActionWidget QLineEdit {
+	margin-top: 2px;
+	border: 1px solid #006805;
+	background: #fff;
+	color: #000;
+}

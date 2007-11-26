@@ -1,0 +1,5 @@
+<RCC>
+	<qresource prefix='/styles/'>
+		<file>greenish.css</file>
+	</qresource>
+</RCC>
