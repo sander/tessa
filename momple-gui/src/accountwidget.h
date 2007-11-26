@@ -20,13 +20,10 @@
 #ifndef ACCOUNTWIDGET_H
 #define ACCOUNTWIDGET_H
 
-#include "connectionmanager.h"
 #include "statuswidget.h"
 
 #include <QLabel>
 #include <QWidget>
-
-extern ConnectionManager *cm;
 
 class AccountWidget : public QWidget
 {

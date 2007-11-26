@@ -17,27 +17,34 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#include "connectionmanager.h"
 #include "mainwindow.h"
+#if 0
 #include "luathread.h"
+#endif
 
 #include <QApplication>
 #include <QFile>
 
-ConnectionManager *cm;
 MainWindow *mw;
+#if 0
 LuaThread *lt;
+#endif
 
 int main(int argc, char **argv)
 {
 	QApplication app(argc, argv);
 
+#if 0
 	lt = new LuaThread;
 	lt->start();
+#endif
 
-	cm = new ConnectionManager;
+	QFile file(":/styles/greenish.css");
+	file.open(QFile::ReadOnly);
+	QString styleSheet = QString(file.readAll());
+	qApp->setStyleSheet(styleSheet);
+
 	mw = new MainWindow;
-	cm->setParent(mw);
 	mw->show();
 
 	return app.exec();

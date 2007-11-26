@@ -1,5 +1,5 @@
 /*
- * mainwindow.h is a part of the Momple frontend to Tessa.
+ * contactactionwidget.h is a part of the Momple frontend to Tessa.
  * Copyright (C) 2007  Sander Dijkhuis
  *
  * This program is free software; you can redistribute it and/or modify
@@ -17,32 +17,29 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef CONTACTACTIONWIDGET_H
+#define CONTACTACTIONWIDGET_H
 
-#include "footerwidget.h"
+#include "contact.h"
 
-#include <QVBoxLayout>
-#include <QWidget>
+#include <QLineEdit>
+#include <QTextEdit>
+#include <QFrame>
 
-class MainWindow : public QWidget
+class ContactActionWidget : public QFrame
 {
 	Q_OBJECT
 
 	public:
-		MainWindow(QWidget *parent=0);
+		ContactActionWidget(QWidget *parent, Contact *contact);
 
 	private:
-		QVBoxLayout *_mainLayout;
-		QVBoxLayout *_accountFrameLayout;
-		QWidget *_contactList;
-		FooterWidget *_footerWidget;
-
-	protected:
-		void closeEvent(QCloseEvent *);
+		Contact *_contact;
+		QTextEdit *_dialogEdit;
+		QLineEdit *_messageEdit;
 
 	private slots:
-		void cm_signedIn();
+		void on_me_returnPressed();
 };
 
 #endif

@@ -22,5 +22,6 @@
 StatusWidget::StatusWidget(QWidget *parent) : QLineEdit(parent)
 {
 	setText("Available");
-	setStyleSheet("QLineEdit { background-color: transparent; border: 1px solid transparent; } QLineEdit:focus { background-color: white; border: 1px solid gray; }");
+	setFocusPolicy(Qt::ClickFocus);
+	//setStyleSheet("QLineEdit { background-color: transparent; border: 1px solid transparent; } QLineEdit:focus { background-color: white; border: 1px solid gray; }");
 }

@@ -37,23 +37,23 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent)
 
 	resize(240, 360);
 
-	mainLayout = new QVBoxLayout;
-	mainLayout->setMargin(6);
-	mainLayout->setSpacing(6);
-	setLayout(mainLayout);
+	_mainLayout = new QVBoxLayout;
+	_mainLayout->setMargin(0);
+	_mainLayout->setSpacing(0);
+	setLayout(_mainLayout);
 
 	AccountWidget *accountWidget = new AccountWidget;
 	QFrame *accountFrame = new QFrame;
 	accountFrame->setObjectName("accountFrame");
 	accountFrame->setFrameStyle(QFrame::StyledPanel | QFrame::Plain);
-	accountFrameLayout = new QVBoxLayout;
-	accountFrameLayout->setMargin(3);
-	accountFrameLayout->setSpacing(3);
-	accountFrame->setLayout(accountFrameLayout);
+	_accountFrameLayout = new QVBoxLayout;
+	_accountFrameLayout->setMargin(0);
+	_accountFrameLayout->setSpacing(0);
+	accountFrame->setLayout(_accountFrameLayout);
 	accountFrame->layout()->addWidget(accountWidget); 
-	mainLayout->addWidget(accountFrame, 0, Qt::AlignTop);
+	_mainLayout->addWidget(accountFrame, 0, Qt::AlignTop);
 
-	connect(cm, SIGNAL(signedIn()), SLOT(cm_signedIn()));
+	//connect(cm, SIGNAL(signedIn()), SLOT(cm_signedIn()));
 
 	// Temporary: immediately show the roster window
 	cm_signedIn();
@@ -65,30 +65,54 @@ void MainWindow::closeEvent(QCloseEvent *)
 
 void MainWindow::cm_signedIn()
 {
-	contactList = new QWidget;
+	_contactList = new QWidget;
+        _contactList->setObjectName("contactList");
 	QVBoxLayout *contactListLayout = new QVBoxLayout;
 	contactListLayout->setMargin(0);
 	contactListLayout->setSpacing(0);
-	contactList->setLayout(contactListLayout);
+	_contactList->setLayout(contactListLayout);
 	QScrollArea *contactArea = new QScrollArea;
 	contactArea->setBackgroundRole(QPalette::Base);
-	contactArea->setAutoFillBackground(true);
+	//contactArea->setAutoFillBackground(true);
 	contactArea->setObjectName("contactArea");
 	contactArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 	contactArea->setWidgetResizable(true);
+	//contactArea->setLineWidth(0);
+	//contactArea->setStyleSheet("QScrollArea { border-top: 1px solid; }");
 
+#if 0
 	Contact *contact;
 	ContactWidget *contactWidget;
 	foreach (contact, cm->getContacts())
 	{
 		contactWidget = new ContactWidget(0, contact);
-		contactListLayout->addWidget(contactWidget, 0, Qt::AlignTop);
+		_contactListLayout->addWidget(contactWidget, 0, Qt::AlignTop);
 	}
+#endif
 
-	Contact *testContact = new Contact(0, "test@example", "Test");
+	Contact *testContact = new Contact(0, "test@example", "Uncle Scrooge");
 	ContactWidget *testContactWidget = new ContactWidget(0, testContact);
 	contactListLayout->addWidget(testContactWidget, 0, Qt::AlignTop);
+	testContact = new Contact(0, "kjhkj", "Gyro Gearloose");
+	testContactWidget = new ContactWidget(0, testContact);
+	contactListLayout->addWidget(testContactWidget, 0, Qt::AlignTop);
+	testContact = new Contact(0, "kjhkj", "Daisy Duck");
+	testContactWidget = new ContactWidget(0, testContact);
+	contactListLayout->addWidget(testContactWidget, 0, Qt::AlignTop);
+	testContact = new Contact(0, "kjhkj", "Huey Duck");
+	testContactWidget = new ContactWidget(0, testContact);
+	contactListLayout->addWidget(testContactWidget, 0, Qt::AlignTop);
+	testContact = new Contact(0, "kjhkj", "Louie Duck");
+	testContactWidget = new ContactWidget(0, testContact);
+	contactListLayout->addWidget(testContactWidget, 0, Qt::AlignTop);
+	testContact = new Contact(0, "kjhkj", "Dewey Duck");
+	testContactWidget = new ContactWidget(0, testContact);
+	contactListLayout->addWidget(testContactWidget, 0, Qt::AlignTop);
+	contactListLayout->addStretch();
 
-	contactArea->setWidget(contactList);
-	mainLayout->addWidget(contactArea, 1);
+	contactArea->setWidget(_contactList);
+	_mainLayout->addWidget(contactArea, 1);
+
+	_footerWidget = new FooterWidget();
+	_mainLayout->addWidget(_footerWidget, 0);
 }
